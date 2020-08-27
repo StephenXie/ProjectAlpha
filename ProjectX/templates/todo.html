@@ -5,18 +5,13 @@
     <title>Todo Page</title>
 </head>
 <body>
-<h1>Welcome to todo app</h1>
+<h1 style = "text-align:center;">Welcome to todo app</h1>
 
-<!--<ul>
-    <li>temp todo item A</li>
-    <li>temp todo item B</li>
-</ul> -->
-
-<ul>
+<ul style = "text-align:left;">
     {% for todo_item in all_items %}
         <li>{{todo_item.content}}
             <form action = "/deleteTodo/{{todo_item.id}}/"
-                  style = "display: inline;"
+                  style = "display:inline;"
                   method = "post">{% csrf_token %}
                 <input type="submit" value="Delete"/>
             </form>
@@ -24,7 +19,7 @@
     {% endfor %}
 </ul>
 
-<form action = "/addTodo/" method = "post">{% csrf_token %}
+<form action = "/addTodo/" method = "post" style = "text-align:center;">{% csrf_token %}
     <input type="text" name="content"/>
     <input type="submit" value="Add"/>
 </form>

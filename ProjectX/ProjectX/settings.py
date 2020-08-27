@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    #'GPAcal.apps.GpacalConfig',
     'todo.apps.TodoConfig',
     'AppX.apps.AppxConfig',
     'django.contrib.admin',
