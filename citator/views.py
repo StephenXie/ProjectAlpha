@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.views import View
 from citator.forms import CitatorForm
-from citator.script import GetResult,GetWordCount
+from citator.script import GetResult,GetWordCount, GetCharCount
 def CitatorView(request):
     return render(request,'citator.html')
 
@@ -12,5 +12,5 @@ def CitatorPost(request):
         # content = list(map(int, content))
     except:
         return HttpResponse("Integer Value Needed")
-    args = {"content": GetResult(content), "count":GetWordCount(content)}
+    args = {"content": GetResult(content), "WordCount":GetWordCount(content), "CharCount":GetCharCount(content)}
     return render(request,'citator.html',args)

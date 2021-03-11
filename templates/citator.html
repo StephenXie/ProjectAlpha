@@ -35,7 +35,8 @@
 </div>
 <header class="w3-container w3-red w3-center" style="padding:128px 16px" >
     <h1 class="w3-margin w3-jumbo">Citator</h1>
-    <p class="w3-xlarge">Word Count: {{count}}</p>
+    <p class="w3-xlarge">Word Count: {{WordCount}}</p>
+    <p class="w3-xlarge">Character Count: {{CharCount}}</p>
     <form action="/citator/post" method = "post" style = "text-align:center;">
         {% csrf_token %}
       <textarea class="txtarea" value="" size="20" type="text" name="content" rows="20" cols = "100">{{content}}</textarea>
