@@ -16,12 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from todo.views import todoView, addTodo, deleteTodo
+from citator.views import CitatorView,CitatorPost
 from django.conf import settings
 from django.views.static import serve
 from django.conf.urls import url
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('AppX.urls')),
+    path('citator/',CitatorView),
+    path('citator/post',CitatorPost),
     path('todo/',todoView),
     path('addTodo/',addTodo),
     path('deleteTodo/<int:todo_id>/', deleteTodo),

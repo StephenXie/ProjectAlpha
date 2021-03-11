@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     #'GPAcal.apps.GpacalConfig',
     'todo.apps.TodoConfig',
     'AppX.apps.AppxConfig',
+    'citator.apps.CitatorConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

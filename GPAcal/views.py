@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
 # Create your views here.
-def homeview(request):
+def GPAcalview(request):
     GPA = 0
-    return render(request,"home.html",GPA)
+    return render(request,"GPAcal.html",GPA)

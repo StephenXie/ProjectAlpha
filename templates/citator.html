@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Citator</title>
+</head>
+<body>
+<h1 style = "text-align:center;">Welcome to Citator</h1>
+<form action="/citator/post" method = "post" style = "text-align:center;">
+    {% csrf_token %}
+    <input type="text" name="content"/>
+    <button type="submit">Submit</button>
+</form>
+{{content}}
+</body>
+</html>
