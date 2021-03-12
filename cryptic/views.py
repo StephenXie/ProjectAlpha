@@ -3,7 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.views import View
 # from citator.forms import CitatorForm
 # from citator.script import GetResult,GetWordCount, GetCharCount
-from cryptic.script import caesar, vigenere_encrypt, vigenere_decrypt
+from cryptic.script import caesar, caesar_brute, vigenere_encrypt, vigenere_decrypt
 def CrypticView(request):
     return render(request,'cryptic.html')
 
@@ -22,6 +22,8 @@ def CrypticPost(request):
             val = caesar(content,key)
         elif crypt_type=="decrypt":
             val = caesar(content,-key)
+        elif crypt_type=="brute_force_decrypt":
+            val = caesar_brute(content)
 
     elif cipher_type == "vigenere":
         key = request.POST.get('vigenere_key')

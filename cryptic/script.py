@@ -2,14 +2,20 @@ def caesar(text, key):
     res = list(text)
     for i in range(len(res)):
         if res[i].isalpha():
-            res[i] = ceasar_modify(res[i],key)
+            res[i] = caesar_modify(res[i],key)
     return "".join(res)
 
-def ceasar_modify(letter, key):
+def caesar_modify(letter, key):
     if letter.isupper():
         return chr((((ord(letter)-ord("A"))+key)%26)+ord("A"))
     else:
         return chr((((ord(letter)-ord("a"))+key)%26)+ord("a"))
+
+def caesar_brute(text):
+    res = []
+    for i in range(26):
+        res.append(caesar(text,-i))
+    return "\n".join(res)
 
 def vigenere_encrypt(text, keyword):
     res = list(text)
