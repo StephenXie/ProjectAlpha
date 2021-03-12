@@ -1,3 +1,7 @@
 # Project exclude paths
 /venv/
 *.py[cod]
+!**/__pycache__/
+cryptic/__pycache__/script.cpython-38.pyc
+cryptic/__pycache__/views.cpython-38.pyc
+ProjectX/__pycache__/settings.cpython-38.pyc
