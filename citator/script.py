@@ -1,5 +1,5 @@
 def GetResult(n):
-    return n.title()
+    return n.upper()
 def GetWordCount(n):
     return len(n.split())
 def GetCharCount(n):

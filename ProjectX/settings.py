@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'todo.apps.TodoConfig',
     'AppX.apps.AppxConfig',
     'citator.apps.CitatorConfig',
+    'cryptic.apps.CrypticConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
