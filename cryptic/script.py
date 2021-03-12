@@ -12,22 +12,7 @@ def ceasar_modify(letter, key):
         return chr((((ord(letter)-ord("a"))+key)%26)+ord("a"))
 
 def vigenere_encrypt(text, keyword):
-    res = list(text)
-    j = 0
-    for i in range(len(res)):
-        if res[i].isalpha():
-            val = ((ord(res[i]) - ord("a")) + (ord(keyword[j%len(keyword)]) - ord("a")))%26
-            res[i] = chr(val+ord("a"))
-            j+=1
-    return "".join(res)
+    return
 
 def vigenere_decrypt(text, keyword):
-    res = list(text)
-    j = 0
-    for i in range(len(res)):
-        if res[i].isalpha():
-            print(res)
-            val = (26 + (ord(res[i]) - ord("a")) - (ord(keyword[j%len(keyword)]) - ord("a")))%26
-            res[i] = chr(val+ord("a"))
-            j+=1
-    return "".join(res)
+    return
