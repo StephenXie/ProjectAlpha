@@ -13,6 +13,11 @@
     .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
     .fa-anchor,.fa-coffee {font-size:200px}
     </style>
+    <style>
+        .hidden{
+            display: none;
+        }
+    </style>
 </head>
 <body>
 <div class="w3-top">
@@ -37,13 +42,35 @@
     <h1 class="w3-margin w3-jumbo">Cryptic</h1>
     <form action="/cryptic/post" method = "post" style = "text-align:center;">
         {% csrf_token %}
-        <input type="radio" id="encrypt" name="type" value="encrypt">
+        <div>
+            <select id="cipher_type" name="cipher_type" required>
+                <option disabled selected value> -- select an option -- </option>
+                <option value="caesar">Caesar Cipher</option>
+                <option value="vigenere">Vigenere Cipher</option>
+            </select>
+        </div>
+        <script>
+            var ids=["caesar","vigenere"]
+            var dropDown = document.getElementById("cipher_type");
+            dropDown.onchange = function(){
+                for(var x = 0; x < ids.length; x++){   
+                    document.getElementById(ids[x]).style.display="none";
+                }    
+                document.getElementById(this.value).style.display = "block";
+            }
+        </script>
+        <input type="radio" id="encrypt" name="method_type" value="encrypt">
         <label for="encrypt">Encrypt</label><br>
-        <input type="radio" id="female" name="type" value="decrypt">
-        <label for="female">Decrypt</label><br>
-        <label>Number of shifts</label>
-        <input type="text" name="key">
-        <br>
+        <input type="radio" id="decrypt" name="method_type" value="decrypt">
+        <label for="decrypt">Decrypt</label><br>
+        <div id="caesar" class="hidden">
+            <label>Number of shifts</label>
+            <input type="text" name="key">
+        </div>
+        <div id="vigenere" class="hidden">
+            <label>Keyword</label>
+            <input type="text" name="key">
+        </div>
         <textarea class="txtarea" value="" size="20" type="text" name="content" rows="20" cols = "150">{{content}}</textarea>
         <br>
         <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" type="submit">Submit</button>
