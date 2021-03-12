@@ -11,10 +11,9 @@ def CrypticPost(request):
     content = request.POST.get('content',0)
     cipher_type = request.POST.get("cipher_type")
     crypt_type = request.POST.get('method_type',"encrypt")
-
     if cipher_type == "caesar":
         try:
-            key = int(request.POST.get('key',0)) % 26
+            key = int(request.POST.get('caesar_key',0)) % 26
         except:
             return HttpResponse("Error")
         if key<0:
@@ -25,7 +24,7 @@ def CrypticPost(request):
             val = caesar(content,-key)
 
     elif cipher_type == "vigenere":
-        key = request.POST.get('key')
+        key = request.POST.get('vigenere_key')
         content = content.lower()
         if crypt_type == "encrypt":
             val = vigenere_encrypt(content,key)
