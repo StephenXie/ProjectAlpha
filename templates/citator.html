@@ -37,9 +37,19 @@
     <h1 class="w3-margin w3-jumbo">Citator</h1>
     <p class="w3-xlarge">Word Count: {{WordCount}}</p>
     <p class="w3-xlarge">Character Count: {{CharCount}}</p>
+    
     <form action="/citator/post" method = "post" style = "text-align:center;">
         {% csrf_token %}
-      <textarea class="txtarea" value="" size="20" type="text" name="content" rows="20" style="width: 80%; max-width: 90%;">{{content}}</textarea>
+        <div class="w3-xlarge">
+          <label for="style_type">Text style</label>
+          <select id="style_type" name="style_type">
+              <option value="none">None</option>
+              <option value="upper">UPPERCASE</option>
+              <option value="lower">lowercase</option>
+              <option value="title">Title Case</option>
+          </select>
+        </div>
+        <textarea class="txtarea" value="" size="20" type="text" name="content" rows="20" style="width: 80%; max-width: 90%;">{{content}}</textarea>
         <br>
         <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" type="submit">Submit</button>
     </form>

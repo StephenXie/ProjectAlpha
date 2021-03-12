@@ -9,8 +9,8 @@ def CitatorView(request):
 def CitatorPost(request):
     try:
         content = request.POST.get('content',0)
-        # content = list(map(int, content))
+        style = request.POST.get('style_type',"none")
     except:
         return HttpResponse("Integer Value Needed")
-    args = {"content": GetResult(content), "WordCount":GetWordCount(content), "CharCount":GetCharCount(content)}
+    args = {"content": GetResult(content,style), "WordCount":GetWordCount(content), "CharCount":GetCharCount(content)}
     return render(request,'citator.html',args)
