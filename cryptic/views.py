@@ -10,7 +10,7 @@ def CrypticView(request):
 def CrypticPost(request):
     try:
         content = request.POST.get('content',0)
-        key = int(request.POST.get('key',0))
+        key = abs(int(request.POST.get('key',0)))
         crypt_type = request.POST.get('type',"encrypt")
         # content = list(map(int, content))
     except:
