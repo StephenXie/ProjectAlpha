@@ -1,3 +1,4 @@
+import math
 def caesar(text, key):
     res = list(text)
     for i in range(len(res)):
@@ -37,3 +38,26 @@ def vigenere_decrypt(text, keyword):
             res[i] = chr(val+ord("a"))
             j+=1
     return "".join(res)
+
+def affine_encrypt(text, a, b):
+    text = list(text)
+    for i in range(len(text)):
+        if text[i].isalpha():
+            val = ord(text[i])-ord("a")
+            val = a*val + b
+            val %= 26
+            text[i] = chr(val + ord("a"))
+    return "".join(text)
+
+def affine_decrypt(text,a,b):
+    text = list(text)
+    a_inv = 0
+    while (a*a_inv)%26 != 1:
+        a_inv+=1
+    for i in range(len(text)):
+        if text[i].isalpha():
+            val = ord(text[i])-ord("a")
+            val = (val - b) * a_inv
+            val %= 26
+            text[i] = chr(val + ord("a"))
+    return "".join(text)

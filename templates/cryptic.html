@@ -50,10 +50,11 @@
                 <option disabled selected value> -- select an option -- </option>
                 <option value="caesar">Caesar Cipher</option>
                 <option value="vigenere">Vigenere Cipher</option>
+                <option value="affine">Affine Cipher</option>
             </select>
         </div>
         <script>
-            var ids=["caesar","vigenere"]
+            var ids=["caesar","vigenere","affine"]
             var dropDown = document.getElementById("cipher_type");
             dropDown.onchange = function(){
                 for(var x = 0; x < ids.length; x++){   
@@ -75,6 +76,13 @@
         <div id="vigenere" class="hidden">
             <label>Keyword</label>
             <input type="text" name="vigenere_key">
+        </div>
+        <div id="affine" class="hidden">
+            <label for="affine_a">a</label>
+            <input id = "affine_a" type="text" size="10" name="affine_a">
+            <br>
+            <label for="affine_b">b</label>
+            <input id = "affine_b" type="text" size="10" name="affine_b">
         </div>
         <textarea class="txtarea" value="" size="20" type="text" name="content" rows="20" style="width: 80%; max-width: 90%;">{{content}}</textarea>
         <br>
