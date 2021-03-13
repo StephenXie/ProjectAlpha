@@ -81,13 +81,12 @@ WSGI_APPLICATION = 'ProjectX.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
+db_from_env = dj_database_url.config(default="postgres://zluhqtowmpyvet:8dc2014edffac0c281f525721c2cfcdc3e526d0211718f3aae37fc337c740dc5@ec2-52-44-31-100.compute-1.amazonaws.com:5432/d55q54904s24kg")
+DATABASES['default'] = db_from_env
 
 
 
