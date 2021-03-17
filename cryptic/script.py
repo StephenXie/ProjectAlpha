@@ -33,7 +33,6 @@ def vigenere_decrypt(text, keyword):
     j = 0
     for i in range(len(res)):
         if res[i].isalpha():
-            print(res)
             val = (26 + (ord(res[i]) - ord("a")) - (ord(keyword[j%len(keyword)]) - ord("a")))%26
             res[i] = chr(val+ord("a"))
             j+=1
