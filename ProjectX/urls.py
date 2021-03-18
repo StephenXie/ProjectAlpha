@@ -18,7 +18,7 @@ from django.urls import path,include
 from todo.views import todoView, addTodo, deleteTodo
 from citator.views import CitatorView,CitatorPost
 from cryptic.views import CrypticView,CrypticPost
-from GPAcal.views import GPAcalPost,GPAcalView
+from GPAcal.views import GPAcal
 from django.conf import settings
 from django.views.static import serve
 from django.conf.urls import url
@@ -29,8 +29,7 @@ urlpatterns = [
     path('citator/post',CitatorPost),
     path('cryptic/',CrypticView),
     path('cryptic/post',CrypticPost),
-    path('GPAcal/',GPAcalView),
-    path('GPAcal/post',GPAcalPost),
+    path('GPAcal/',GPAcal),
     path('todo/',todoView),
     path('addTodo/',addTodo),
     path('deleteTodo/<int:todo_id>/', deleteTodo),
