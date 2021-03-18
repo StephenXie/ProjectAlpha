@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<header class="w3-container w3-red w3-center" style="padding:128px 16px" >
+    <h1 class="w3-margin w3-jumbo">GPA Calculator</h1>
+    <p class="w3-xlarge">Your Current Grade: {{GPA}}</p>
+    <form action="/cryptic/post" method = "post" style = "text-align:center;">
+        {% csrf_token %}
+        <input type="radio" id="weighted" name="method_type" value="weighted">
+        <label for="weighted">Weighted</label><br>
+        <input type="radio" id="unweighted" name="method_type" value="unweighted">
+        <label for="unweighted">Unweighted</label><br>
+        <div id="class">
+            <input type="text" id="class_name" name = "class_name">
+            <select id="grade" name="grade" required>
+                <option disabled selected value> -- select an option -- </option>
+                <option value="A+">A+</option>
+                <option value="A">A</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B">B</option>
+                <option value="B-">B-</option>
+                <option value="C+">C+</option>
+                <option value="C">C</option>
+                <option value="C-">C-</option>
+                <option value="D+">D+</option>
+                <option value="D">D</option>
+                <option value="D-">D-</option>
+                <option value="F">F</option>
+            </select>
+            <select id="class_type" name="class_type" required>
+                <option disabled selected value> -- select an option -- </option>
+                <option value="AP">AP</option>
+                <option value="IB">IB</option>
+                <option value="H">Honors</option>
+                <option value="">Normal</option>
+            </select>
+        </div>
+        <button type="button" id="add_class" onclick="myFunction()">Add Class</button>
+        <script>
+        $(function() {
+            $('#add_class').click(function(){
+                var newDiv = $('<div id="class"><input type="text" id="class_name" name = "class_name"> <select id="grade" name="grade" required><option disabled selected value> -- select an option -- </option><option value="A+">A+</option><option value="A">A</option><option value="A-">A-</option><option value="B+">B+</option><option value="B">B</option><option value="B-">B-</option><option value="C+">C+</option><option value="C">C</option> <option value="C-">C-</option> <option value="D+">D+</option><option value="D">D</option><option value="D-">D-</option><option value="F">F</option></select><select id="class_type" name="class_type" required><option disabled selected value> -- select an option -- </option><option value="AP">AP</option>><option value="IB">IB</option><option value="H">Honors</option><option value="">Normal</option></select></div>');
+            //newDiv.style.background = "#000";
+            $('#class').append(newDiv);
+            });
+        });
+        </script>
+        <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" type="submit">Submit</button>
+    </form>
+</header>
+{% endblock %}

@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'AppX.apps.AppxConfig',
     'citator.apps.CitatorConfig',
     'cryptic.apps.CrypticConfig',
+    'GPAcal.apps.GpacalConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,7 +56,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT = False
+SECURE_SSL_REDIRECT = True
 ROOT_URLCONF = 'ProjectX.urls'
 
 TEMPLATES = [
