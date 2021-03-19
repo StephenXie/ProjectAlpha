@@ -6,20 +6,25 @@
     <p class="w3-xlarge">Todo List</p>
 </header>
 
-<ul style = "text-align:left;">
+<ul lass="flex flex-col" style = "text-align:left;">
     {% for todo_item in all_items %}
-        <li>{{todo_item.content}}
+        <li class="border-gray-400 flex flex-row mb-2">{{todo_item.content}}
             <form action = "/deleteTodo/{{todo_item.id}}/"
                   style = "display:inline;"
                   method = "post">{% csrf_token %}
-                <input type="submit" value="Delete"/>
+                  <button type="submit" value="Delete" class="py-2 px-4 bg-gradient-to-r from-green-400 to-blue-500 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 ">
+                    Delete
+                </button>
             </form>
         </li>
     {% endfor %}
 </ul>
 
 <form action = "/addTodo/" method = "post" style = "text-align:center;">{% csrf_token %}
-    <input type="text" name="content"/>
-    <input type="submit" value="Add"/>
+    <div class="flex max-w-md m-auto">
+        <input style="width:20%;"class="inline w-2/5 m-auto rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" name="content"/>
+        <button type="submit" value="Add" style="width:20%;"class="inline max-x-xs py-2 px-3  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">Add</button>
+    </div>
+    
 </form>
 {% endblock %}

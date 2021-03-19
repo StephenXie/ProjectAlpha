@@ -3,14 +3,14 @@
 {% block content %}
 <header class="w3-container w3-red w3-center" style="padding:128px 16px" >
     <h1 class="w3-margin w3-jumbo">Formatter</h1>
-    <p class="w3-xlarge">Word Count: {{WordCount}}</p>
+    <p class="w3-xlarge text-lg font-semibold">Word Count: {{WordCount}}</p>
     <p class="w3-xlarge">Character Count: {{CharCount}}</p>
     
     <form action="/formatter/post" method = "post" style = "text-align:center;">
         {% csrf_token %}
-        <div class="w3-xlarge">
-          <label for="style_type">Text style</label>
-          <select id="style_type" name="style_type">
+        <div class="container px-4 m-auto">
+          <label for="style_type" class="w3-xlarge inline">Text style</label>
+          <select id="style_type" class="inline m-auto block w-52 text-gray-700 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500" name="style_type">
               <option value="none">None</option>
               <option value="upper">UPPERCASE</option>
               <option value="lower">lowercase</option>
@@ -20,9 +20,9 @@
               <option value="ljust">Left Justify</option>
           </select>
         </div>
-        <textarea class="txtarea" value="" size="20" type="text" name="content" rows="20" style="width: 80%; max-width: 90%;">{{content}}</textarea>
+        <textarea class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none" value="" size="20" type="text" name="content" rows="20" style="width: 80%; max-width: 90%;">{{content}}</textarea>
         <br>
-        <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" type="submit">Submit</button>
+        <button type="submit" class="max-w-xs py-2 px-3  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">Submit</button>
     </form>
 </header>
 {% endblock %}

@@ -6,7 +6,7 @@
     <form action="/cryptic/post" method = "post" style = "text-align:center;">
         {% csrf_token %}
         <div>
-            <select id="cipher_type" name="cipher_type" required>
+            <select class="m-auto block w-52 text-gray-700 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"id="cipher_type" name="cipher_type" required>
                 <option disabled selected value> -- select an option -- </option>
                 <option value="caesar">Caesar Cipher</option>
                 <option value="vigenere">Vigenere Cipher</option>
@@ -23,26 +23,30 @@
                 document.getElementById(this.value).style.display = "block";
             }
         </script>
-        <input type="radio" id="encrypt" name="method_type" value="encrypt">
-        <label for="encrypt">Encrypt</label><br>
-        <input type="radio" id="decrypt" name="method_type" value="decrypt">
-        <label for="decrypt">Decrypt</label><br>
-        <div id="caesar" class="hidden">
-            <input type="radio" id="brute_force_decrypt" name="method_type" value="brute_force_decrypt">
-            <label for="brute_force_decrypt">Brute Force Decrypt</label><br>
-            <label>Number of shifts</label>
-            <input type="text" name="caesar_key">
-        </div>
-        <div id="vigenere" class="hidden">
-            <label>Keyword</label>
-            <input type="text" name="vigenere_key">
-        </div>
-        <div id="affine" class="hidden">
-            <label for="affine_a">a</label>
-            <input id = "affine_a" type="text" size="10" name="affine_a">
-            <br>
-            <label for="affine_b">b</label>
-            <input id = "affine_b" type="text" size="10" name="affine_b">
+        <div class="text-center">
+            <div class="inline-block text-left">
+                <input type="radio" id="encrypt" name="method_type" value="encrypt">
+                <label for="encrypt">Encrypt</label><br>
+                <input type="radio" id="decrypt" name="method_type" value="decrypt">
+                <label for="decrypt">Decrypt</label><br>
+                <div id="caesar" class="hidden">
+                    <input type="radio" id="brute_force_decrypt" name="method_type" value="brute_force_decrypt">
+                    <label for="brute_force_decrypt">Brute Force Decrypt</label><br>
+                    <label>Number of shifts</label>
+                    <input type="text" name="caesar_key">
+                </div>
+                <div id="vigenere" class="hidden">
+                    <label>Keyword</label>
+                    <input type="text" name="vigenere_key">
+                </div>
+                <div id="affine" class="hidden">
+                    <label for="affine_a">a</label>
+                    <input id = "affine_a" type="text" size="10" name="affine_a">
+                    <br>
+                    <label for="affine_b">b</label>
+                    <input id = "affine_b" type="text" size="10" name="affine_b">
+                </div>
+            </div>
         </div>
         <textarea class="txtarea" value="" size="20" type="text" name="content" rows="20" style="width: 80%; max-width: 90%;">{{content}}</textarea>
         <br>

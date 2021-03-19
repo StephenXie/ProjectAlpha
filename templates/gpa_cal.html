@@ -9,9 +9,9 @@
     <form action="/GPAcal/" id="form" method = "post" style = "text-align:center;">
         {% csrf_token %}
         <div id="classes">
-            <div id="class">
-                <input type="text" id="class_name" name = "class_name">
-                <select id="grade" name="grade" required>
+            <div id="class" class = "m-auto">
+                <input type="text" class="inline max-w-xs rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" id="class_name" name = "class_name">
+                <select id="grade" class="inline m-auto block w-52 text-gray-700 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500" name="grade" required>
                     <option value="A+">A+</option>
                     <option value="A" selected="selected">A</option>
                     <option value="A-">A-</option>
@@ -26,7 +26,7 @@
                     <option value="D-">D-</option>
                     <option value="F">F</option>
                 </select>
-                <select id="class_type" name="class_type" required>
+                <select id="class_type" class = "inline m-auto block w-52 text-gray-700 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"name="class_type" required>
                     <option value="AP">AP</option>
                     <option value="IB">IB</option>
                     <option value="H">Honors</option>
