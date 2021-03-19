@@ -5,6 +5,19 @@ def GetResult(n,style):
         return n.lower()
     elif style == "title":
         return n.title()
+    elif style == "one-line":
+        res = ""
+        for i in list(n):
+            if i!="\r" and i!="\n":
+                res+=i
+        return res
+    elif style == "space":
+        return n.replace(" ","")
+    elif style == "ljust":
+        res = []
+        for i in n.split("\n"):
+            res.append(i.lstrip())
+        return "\n".join(res)
     else:
         return n
 def GetWordCount(n):

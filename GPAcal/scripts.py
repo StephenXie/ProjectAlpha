@@ -1,9 +1,15 @@
-def getGPA(score_arr,weight_arr,flag):
+def getGPA_w(score_arr,weight_arr):
     res = 0
     for i in range(len(score_arr)):
         temp = scoreToVal(score_arr[i])
-        if flag:
-            temp = getWeighted(temp,weight_arr[i])
+        temp = getWeighted(temp,weight_arr[i])
+        res+=temp
+    return res/len(score_arr)
+
+def getGPA_u(score_arr,weight_arr):
+    res = 0
+    for i in range(len(score_arr)):
+        temp = scoreToVal(score_arr[i])
         res+=temp
     return res/len(score_arr)
 def scoreToVal(grade):

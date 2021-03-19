@@ -4,47 +4,44 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <header class="w3-container w3-red w3-center" style="padding:128px 16px" >
     <h1 class="w3-margin w3-jumbo">GPA Calculator</h1>
-    <p class="w3-xlarge">Your Current Grade: {{GPA}}</p>
-    <form action="/GPAcal/" method = "post" style = "text-align:center;">
+    <p class="w3-xlarge">Your Weighted GPA: {{GPA_w}}</p>
+    <p class="w3-xlarge">Your Unweighted GPA: {{GPA_u}}</p>
+    <form action="/GPAcal/" id="form" method = "post" style = "text-align:center;">
         {% csrf_token %}
-        <input type="radio" id="weighted" name="method_type" value="True">
-        <label for="weighted">Weighted</label><br>
-        <input type="radio" id="unweighted" name="method_type" value="False">
-        <label for="unweighted">Unweighted</label><br>
-        <div id="class">
-            <input type="text" id="class_name" name = "class_name">
-            <select id="grade" name="grade" required>
-                <option disabled selected value> -- select an option -- </option>
-                <option value="A+">A+</option>
-                <option value="A">A</option>
-                <option value="A-">A-</option>
-                <option value="B+">B+</option>
-                <option value="B">B</option>
-                <option value="B-">B-</option>
-                <option value="C+">C+</option>
-                <option value="C">C</option>
-                <option value="C-">C-</option>
-                <option value="D+">D+</option>
-                <option value="D">D</option>
-                <option value="D-">D-</option>
-                <option value="F">F</option>
-            </select>
-            <select id="class_type" name="class_type" required>
-                <option disabled selected value> -- select an option -- </option>
-                <option value="AP">AP</option>
-                <option value="IB">IB</option>
-                <option value="H">Honors</option>
-                <option value="">Normal</option>
-            </select>
+        <div id="classes">
+            <div id="class">
+                <input type="text" id="class_name" name = "class_name">
+                <select id="grade" name="grade" required>
+                    <option value="A+">A+</option>
+                    <option value="A" selected="selected">A</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B">B</option>
+                    <option value="B-">B-</option>
+                    <option value="C+">C+</option>
+                    <option value="C">C</option>
+                    <option value="C-">C-</option>
+                    <option value="D+">D+</option>
+                    <option value="D">D</option>
+                    <option value="D-">D-</option>
+                    <option value="F">F</option>
+                </select>
+                <select id="class_type" name="class_type" required>
+                    <option value="AP">AP</option>
+                    <option value="IB">IB</option>
+                    <option value="H">Honors</option>
+                    <option value="" selected="selected">Normal</option>
+                </select>
+            </div>
         </div>
         <button type="button" id="add_class" onclick="myFunction()">Add Class</button>
         <br>
         <script>
         $(function() {
             $('#add_class').click(function(){
-                var newDiv = $('<div id="class"><input type="text" id="class_name" name = "class_name"><select id="grade" name="grade" required><option disabled selected value> -- select an option -- </option><option value="A+">A+</option><option value="A">A</option><option value="A-">A-</option><option value="B+">B+</option><option value="B">B</option><option value="B-">B-</option><option value="C+">C+</option><option value="C">C</option> <option value="C-">C-</option> <option value="D+">D+</option><option value="D">D</option><option value="D-">D-</option><option value="F">F</option></select><select id="class_type" name="class_type" required><option disabled selected value> -- select an option -- </option><option value="AP">AP</option>><option value="IB">IB</option><option value="H">Honors</option><option value="">Normal</option></select></div>');
+                var newDiv = $('<div id="classes"><div id="class"><input type="text" id="class_name" name = "class_name"> <select id="grade" name="grade" required><option value="A+">A+</option><option value="A" selected="selected">A</option><option value="A-">A-</option><option value="B+">B+</option><option value="B">B</option><option value="B-">B-</option><option value="C+">C+</option><option value="C">C</option><option value="C-">C-</option><option value="D+">D+</option><option value="D">D</option><option value="D-">D-</option><option value="F">F</option></select> <select id="class_type" name="class_type" required><option value="AP">AP</option><option value="IB">IB</option><option value="H">Honors</option><option value="" selected="selected">Normal</option></select></div></div>');
             //newDiv.style.background = "#000";
-            $('#class').append(newDiv);
+            $('#classes').append(newDiv);
             });
         });
         </script>

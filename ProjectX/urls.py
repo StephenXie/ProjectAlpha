@@ -25,8 +25,8 @@ from django.conf.urls import url
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('AppX.urls')),
-    path('citator/',CitatorView),
-    path('citator/post',CitatorPost),
+    path('formatter/',CitatorView),
+    path('formatter/post',CitatorPost),
     path('cryptic/',CrypticView),
     path('cryptic/post',CrypticPost),
     path('GPAcal/',GPAcal),
