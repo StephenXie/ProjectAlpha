@@ -1,11 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .models import TodoItem
-
+from django.forms.models import model_to_dict
 
 # Create your views here.
 def todoView(request):
     all_todo_items = TodoItem.objects.all()
+    for i in all_todo_items:
+        print(model_to_dict(i)['date'])
     return render(request, 'todo.html',
                   {'all_items': all_todo_items})
 
