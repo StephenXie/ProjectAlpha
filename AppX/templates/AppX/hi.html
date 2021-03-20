@@ -3,10 +3,24 @@
 {% block content %}
 
 <!-- Header -->
-<header class="w3-container w3-red w3-center" style="padding:128px 16px">
-  <h1 class="w3-margin w3-jumbo">Stephen Xie</h1>
-  <p class="w3-xlarge">Home page</p>
-  <button onclick="location.href='https://stephenxie.me/'" class="w3-button w3-black w3-padding-large w3-large w3-margin-top" type="button">Get Started</button>
+<header class="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
+  <div class="relative z-30 p-5 text-center text-2xl text-white rounded-xl">
+    <h1 class="w3-margin w3-jumbo font-extrabold font-sans">Stephen Xie</h1>
+    <button onclick="location.href='https://stephenxie.me/'" class="py-4 px-6 m-4 bg-yellow-300 hover:bg-yellow-500 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-2/5 transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full" type="button">Get Started</button>
+  </div>
+  <video
+    autoplay
+    loop
+    muted
+    class="absolute z-10 w-auto min-w-full min-h-full max-w-none"
+  >
+    <source
+      src="..\static\admin\img\Pexels Videos 1409899.mp4"
+      type="video/mp4"
+    />
+    Your browser does not support the video tag.
+  </video>
+  
 </header>
 
 <!-- First Grid -->
@@ -42,7 +56,7 @@
 </div>
 
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+    <h1 class="w3-margin w3-xlarge">Quote of the day: Live Laugh Love</h1>
 </div>
 
 {% endblock %}
