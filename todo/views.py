@@ -22,7 +22,9 @@ def todoView(request):
     items = []
     for i in all_todo_items:
         items.append(item(i.date,i.content,i.id))
-    print(tzlocal.get_localzone())
+    print("\n")
+    print(request.META.get('REMOTE_ADDR'))
+    print("\n")
     return render(request, 'todo.html',
                   {'all_items': all_todo_items,'items':items})
 
