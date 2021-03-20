@@ -13,7 +13,10 @@ def CrypticPost(request):
     crypt_type = request.POST.get('method_type',"encrypt")
     if cipher_type == "caesar":
         try:
-            key = int(request.POST.get('caesar_key',0)) % 26
+            key = request.POST.get('caesar_key',0)
+            if not key:
+                key = 0
+            key = int(key) % 26
         except:
             return HttpResponse("Error")
         if key<0:

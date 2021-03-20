@@ -15,7 +15,7 @@ def caesar_modify(letter, key):
 def caesar_brute(text):
     res = []
     for i in range(26):
-        res.append(caesar(text,-i))
+        res.append(str(i)+". "+caesar(text,-i))
     return "\n".join(res)
 
 def vigenere_encrypt(text, keyword):
