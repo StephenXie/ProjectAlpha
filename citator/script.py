@@ -13,7 +13,7 @@ def GetResult(n,style):
         return res
     elif style == "space":
         return n.replace(" ","")
-    elif style == "ljust":
+    elif style == "lstrip":
         res = []
         for i in n.split("\n"):
             res.append(i.lstrip())
