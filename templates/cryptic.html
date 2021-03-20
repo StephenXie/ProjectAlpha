@@ -25,26 +25,25 @@
         </script>
         <div class="text-center">
             <div class="inline-block text-left w-52">
-                <input type="radio" class="inline-block" id="encrypt" name="method_type" value="encrypt">
-                <label for="encrypt"class="inline-block">Encrypt</label><br>
-                <input type="radio" class="inline-block" id="decrypt" name="method_type" value="decrypt">
-                <label for="decrypt"class="inline-block">Decrypt</label><br>
+                <div class="flex space-x-0.5">
+                    <input type="radio" class="inline-block mt-1.5" id="encrypt" name="method_type" value="encrypt">
+                    <label for="encrypt"class="inline-block pr-4">Encrypt</label>
+                    <input type="radio" class="inline-block mt-1.5" id="decrypt" name="method_type" value="decrypt">
+                    <label for="decrypt"class="inline-block">Decrypt</label>
+                </div>
                 <div id="caesar" class="hidden">
                     <input type="radio" id="brute_force_decrypt" name="method_type" value="brute_force_decrypt">
                     <label for="brute_force_decrypt">Brute Force Decrypt</label><br>
-                    <label>Number of shifts</label>
-                    <input type="text" class="inline-block max-w-md rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" name="caesar_key">
+                    <input type="text" class="inline-block max-w-md rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Number of shifts" name="caesar_key">
                 </div>
                 <div id="vigenere" class="hidden">
-                    <label>Keyword</label>
-                    <input type="text" class="inline-block max-w-md rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" name="vigenere_key">
+                    <input type="text" class="inline-block max-w-md rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Keyword"name="vigenere_key">
                 </div>
                 <div id="affine" class="hidden">
-                    <label for="affine_a">a</label>
-                    <input id = "affine_a" type="text" class="inline-block max-w-sm rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" size="10" name="affine_a">
-                    <br>
-                    <label for="affine_b">b</label>
-                    <input id = "affine_b" type="text" class="inline-block max-w-sm rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" size="10" name="affine_b">
+                    <div class="flex">
+                        <input id = "affine_a" type="text" class="inline-block rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-1/2 py-1.5 px-2 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="a" name="affine_a">
+                        <input id = "affine_b" type="text" class="inline-block rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-1/2 py-1.5 px-2 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="b" name="affine_b">
+                    </div>
                 </div>
             </div>
         </div>
