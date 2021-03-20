@@ -4,7 +4,6 @@ from .models import TodoItem
 from django.forms.models import model_to_dict
 from django.utils import timezone
 import pytz
-import tzlocal
 # Create your views here.
 class item:
     def __init__(self,date,content,id_):
@@ -15,16 +14,13 @@ class item:
 def convert_to_localtime(utctime):
     tm = "%B %d,%Y %I:%M %p"
     utc = utctime.replace(tzinfo=pytz.UTC)
-    localtz = utc.astimezone(timezone.get_current_timezone())
+    localtz = utc.astimezone(pytz.timezone('America/Los_Angeles'))
     return localtz.strftime(tm).lstrip("0").replace(" 0"," ")
 def todoView(request):
     all_todo_items = TodoItem.objects.all()
     items = []
     for i in all_todo_items:
         items.append(item(i.date,i.content,i.id))
-    print("\n")
-    print(request.META.get('REMOTE_ADDR'))
-    print("\n")
     return render(request, 'todo.html',
                   {'all_items': all_todo_items,'items':items})
 
