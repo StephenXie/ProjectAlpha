@@ -5,11 +5,11 @@
     <h1 class="w3-margin w3-jumbo">Stephen Xie</h1>
     <p class="w3-xlarge">Todo List</p>
 </header>
-<div class="container flex flex-col mx-auto w-2/5 items-center justify-center bg-white dark:bg-gray-800 rounded-lg shadow">
-<ul class="w-full flex flex-col divide divide-y">
+<div class="container flex flex-col mx-auto max-w-full w-3/5 items-center justify-center">
+<ul class="w-full flex flex-col">
     {% for todo_item in items %}
         <li class="border-gray-400 flex flex-row mb-2">
-            <div class="select-none cursor-pointer flex flex-1 items-center p-4">
+            <div class="shadow border select-none cursor-pointer bg-white dark:bg-gray-800 rounded-md flex flex-1 items-center p-4">
                 <div class="flex-1 pl-1 mr-16">
                     <div class="font-medium dark:text-white">
                         {{todo_item.content}}
