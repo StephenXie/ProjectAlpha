@@ -5,21 +5,29 @@
     <h1 class="w3-margin w3-jumbo">Stephen Xie</h1>
     <p class="w3-xlarge">Todo List</p>
 </header>
-
-<ul lass="flex flex-col" style = "text-align:left;">
+<div class="container flex flex-col mx-auto w-96 items-center justify-center bg-white dark:bg-gray-800 rounded-lg shadow">
+<ul class="flex flex-col divide divide-y">
     {% for todo_item in all_items %}
-        <li class="border-gray-400 flex flex-row mb-2">{{todo_item.content}}
+        <li class="border-gray-400 flex flex-row mb-2">
+            <div class="select-none cursor-pointer flex flex-1 items-center p-4">
+                <div class="flex-1 pl-1 mr-16">
+                    <div class="font-medium dark:text-white">
+                        {{todo_item.content}}
+                    </div>
+                </div>
             <form action = "/deleteTodo/{{todo_item.id}}/"
                   style = "display:inline;"
                   method = "post">{% csrf_token %}
-                  <button type="submit" value="Delete" class="py-2 px-4 bg-gradient-to-r from-green-400 to-blue-500 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 ">
+                  <button type="submit" value="Delete" class="py-2 px-4 bg-gradient-to-r from-red-400 to-blue-500 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg">
                     Delete
                 </button>
             </form>
+            </div>
         </li>
     {% endfor %}
 </ul>
-
+</div>
+<br>
 <form action = "/addTodo/" method = "post" style = "text-align:center;">{% csrf_token %}
     <div class="flex max-w-md m-auto">
         <input style="width:20%;"class="inline w-2/5 m-auto rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" name="content"/>
