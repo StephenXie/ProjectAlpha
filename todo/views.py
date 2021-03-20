@@ -13,9 +13,9 @@ class item:
         self.content = content
         self.id = id_
 def convert_to_localtime(utctime):
-    tm = "%B %m,%Y %I:%M %p"
+    tm = "%B %d,%Y %I:%M %p"
     utc = utctime.replace(tzinfo=pytz.UTC)
-    localtz = utc.astimezone(tzlocal.get_localzone())
+    localtz = utc.astimezone(timezone.get_current_timezone())
     return localtz.strftime(tm).lstrip("0").replace(" 0"," ")
 def todoView(request):
     all_todo_items = TodoItem.objects.all()
