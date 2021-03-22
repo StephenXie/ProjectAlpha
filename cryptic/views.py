@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.views import View
-# from citator.forms import CitatorForm
-# from citator.script import GetResult,GetWordCount, GetCharCount
+# from formatter.forms import FormatterForm
+# from formatter.script import GetResult,GetWordCount, GetCharCount
 from cryptic.script import caesar, caesar_brute, vigenere_encrypt, vigenere_decrypt, affine_encrypt, affine_decrypt
 def CrypticView(request):
     return render(request,'cryptic.html')

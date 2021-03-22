@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from todo.views import todoView, addTodo, deleteTodo
-from citator.views import CitatorView,CitatorPost
+from formatter.views import FormatterView,FormatterPost
 from cryptic.views import CrypticView,CrypticPost
 from GPAcal.views import GPAcal
 from django.conf import settings
@@ -25,8 +25,8 @@ from django.conf.urls import url
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('AppX.urls')),
-    path('formatter/',CitatorView),
-    path('formatter/post',CitatorPost),
+    path('formatter/',FormatterView),
+    path('formatter/post',FormatterPost),
     path('cryptic/',CrypticView),
     path('cryptic/post',CrypticPost),
     path('GPAcal/',GPAcal),

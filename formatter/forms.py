@@ -1,5 +1,5 @@
 from django import forms
 
-class CitatorForm(forms.Form):
+class FormatterForm(forms.Form):
     post = forms.CharField() 
 
