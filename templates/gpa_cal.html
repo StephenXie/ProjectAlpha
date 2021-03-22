@@ -39,17 +39,17 @@
                     <option value="H">Honors</option>
                     <option value="" selected="selected">Normal</option>
                 </select>
-                <button type="button" class="inline-block m-auto transform hover:scale-110" onclick="deleteClass('class-0')"   id="delete_class">
+                <button type="button" class="inline-block m-auto transform hover:scale-110 duration-200" onclick="deleteClass('class-0')"   id="delete_class">
                     <img class="pb-1 inline-block m-auto" src="https://stephenxie.me/images/delete.svg" height="40" width="40"/>
                 </button>
             </div>
         </div>
-                <button type="button" class = "py-2 px-4 bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"id="add_class">Add Class</button>
+                <button type="button" class = "py-2 px-4 bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 text-white transition delay-100 duration-200 ease-in-out  text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"id="add_class">Add Class</button>
                 <script>
                 var counter = parseInt("1");
                 $(function() {
                     $('#add_class').click(function(){
-                        var newDiv = $(`<div id="class-${counter}" class = "m-auto"><input type="text" placeholder="Class name" style="width:40%;"class="inline-block max-w-md rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" id="class_name" name = "class_name"> <select id="grade" class="inline-block m-auto w-24 text-gray-700 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500" name="grade" required><option value="A+">A+</option><option value="A" selected="selected">A</option><option value="A-">A-</option><option value="B+">B+</option><option value="B">B</option><option value="B-">B-</option><option value="C+">C+</option><option value="C">C</option><option value="C-">C-</option><option value="D+">D+</option><option value="D">D</option><option value="D-">D-</option><option value="F">F</option></select> <select id="class_type" class = "inline-block m-auto w-36 text-gray-700 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"name="class_type" required><option value="AP">AP</option><option value="IB">IB</option><option value="H">Honors</option><option value="" selected="selected">Normal</option></select> <button type="button" class=" inline-block m-auto transform hover:scale-110" onclick="deleteClass('class-${counter}')"   id="delete_class"><img class="pb-1 inline-block m-auto" src="https://stephenxie.me/images/delete.svg" height="40" width="40"/></button></div>`);
+                        var newDiv = $(`<div id="class-${counter}" class = "m-auto"><input type="text" placeholder="Class name" style="width:40%;"class="inline-block max-w-md rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" id="class_name" name = "class_name"> <select id="grade" class="inline-block m-auto w-24 text-gray-700 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500" name="grade" required><option value="A+">A+</option><option value="A" selected="selected">A</option><option value="A-">A-</option><option value="B+">B+</option><option value="B">B</option><option value="B-">B-</option><option value="C+">C+</option><option value="C">C</option><option value="C-">C-</option><option value="D+">D+</option><option value="D">D</option><option value="D-">D-</option><option value="F">F</option></select> <select id="class_type" class = "inline-block m-auto w-36 text-gray-700 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"name="class_type" required><option value="AP">AP</option><option value="IB">IB</option><option value="H">Honors</option><option value="" selected="selected">Normal</option></select> <button type="button" class=" inline-block m-auto transform hover:scale-110 duration-200" onclick="deleteClass('class-${counter}')"   id="delete_class"><img class="pb-1 inline-block m-auto" src="https://stephenxie.me/images/delete.svg" height="40" width="40"/></button></div>`);
                     //newDiv.style.background = "#000";
                     $('#classes').append(newDiv);
                     counter+=1
@@ -64,7 +64,7 @@
                 </script>
             </div>
         </div>
-        <button class="py-2 px-3 bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white transition ease-in-out duration-300 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg" type="submit">Submit</button>
+        <button class="py-2 px-3 bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white transition ease-in-out duration-300 delay-100 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg" type="submit">Submit</button>
     </form>
 </div>
 {% endblock %}
