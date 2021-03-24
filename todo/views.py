@@ -22,16 +22,20 @@ def todoView(request):
     for i in all_todo_items:
         items.append(item(i.date,i.content,i.id))
     return render(request, 'todo.html',
-                  {'all_items': all_todo_items,'items':items})
+                  {'all_items': all_todo_items,'items':items,'auth':request.user.is_authenticated})
 
 
 def addTodo(request):
+    if not request.user.is_authenticated:
+        return render(request,'404.html')
     new_item = TodoItem(content=request.POST['content'])
     new_item.save()
     return HttpResponseRedirect('/todo/')
 
 
 def deleteTodo(request, todo_id):
+    if not request.user.is_authenticated:
+        return render(request,'404.html')
     delete_item = TodoItem.objects.get(id=todo_id)
     delete_item.delete()
     return HttpResponseRedirect('/todo/')

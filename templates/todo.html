@@ -21,9 +21,15 @@
             <form action = "/deleteTodo/{{todo_item.id}}/"
                   style = "display:inline;"
                   method = "post">{% csrf_token %}
-                  <button type="submit" value="Delete" class="py-2 px-4 bg-gradient-to-r from-red-400 to-blue-500 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg">
+                  {% if auth %}
+                  <button type="submit" value="Delete" class="py-2 px-4 bg-gradient-to-r from-red-400 to-blue-500 transform hover:scale-110 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg">
                     Delete
-                </button>
+                  </button>
+                  {% else %}
+                  <button type="submit" disabled="" value="Delete" class="cursor-not-allowed py-2 px-4 bg-gradient-to-r from-red-400 to-blue-500 transform hover:scale-110 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg">
+                    Delete
+                  </button>
+                  {% endif %}
             </form>
             </div>
         </li>
@@ -31,11 +37,16 @@
 </ul>
 </div>
 <br>
+
 <form action = "/addTodo/" method = "post" style = "text-align:center;">{% csrf_token %}
     <div class="flex max-w-md m-auto">
         <input style="width:20%;"class="inline w-2/5 m-auto rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" name="content"/>
+        {% if auth %}
         <button type="submit" value="Add" style="width:20%;"class="inline max-x-xs py-2 px-3  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">Add</button>
+        {% else %}
+        <button type="submit" disabled=""value="Add" style="width:20%;"class="cursor-not-allowed inline max-x-xs py-2 px-3  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">Add</button>
+        {% endif %}
     </div>
-    
 </form>
+
 {% endblock %}
