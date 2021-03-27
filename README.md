@@ -42,3 +42,4 @@ python manage.py runserver
   - let user select what college they wanted to go to
     - gather dataset from colleges
     - show how users' GPA compare to other candidates
+    - possibly implement goals/"tracks" the user should follow to reach their goal. (i.e: how they need to improve their grade to reach certain GPA, etc.)
