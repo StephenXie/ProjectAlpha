@@ -22,10 +22,13 @@ python manage.py runserver
     - Can pass arguments to the html  
   - Scripts - what you do with the inputs
     - Interact with the views
-  - Model - database stuff
+  - Models - database stuff
 - Templates - contains htmls
   - HTMLs - what user actually sees
   - base.html - the template html file so that we don't have to copy and paste everytime we make changes   
+- AppX - Home page
+- ProjectX - Settings
+- Static - Assets(e.g. images, css, js)
 ## GPA Calculator
 - add and delete class button
   - implemented using JS and JQuery
