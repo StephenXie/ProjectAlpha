@@ -33,3 +33,4 @@ python manage.py runserver
 - all button and input fields are powered with some *nice* CSS and are *interactive*
   - currently using Tailwind CSS
   - might switch to bootstrap later
+  - part of a student advisory center concept
