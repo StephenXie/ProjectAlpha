@@ -33,4 +33,9 @@ python manage.py runserver
 - all button and input fields are powered with some *nice* CSS and are *interactive*
   - currently using Tailwind CSS
   - might switch to bootstrap later
-  - part of a student advisory center concept
+- part of a student advisory center concept
+  - college preparation
+  - precentile finding
+  - let user select what college they wanted to go to
+    - gather dataset from colleges
+    - show how users' GPA compare to other candidates
