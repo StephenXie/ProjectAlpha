@@ -12,6 +12,12 @@ def getGPA_u(score_arr,weight_arr):
         temp = scoreToVal(score_arr[i])
         res+=temp
     return res/len(score_arr)
+
+def getMaxGPA(weight_arr):
+    res = 0
+    for i in range(len(weight_arr)):
+        res+=getWeighted(4,weight_arr[i])
+    return res/len(weight_arr)
 def scoreToVal(grade):
     dic = {
         "A+":4.3,
