@@ -1,6 +1,6 @@
 # WebProjectX
 ## Where can I find this *AWESOME* website?
-Go to https://www.stephenx.tech/ or https://www.stephenx.live/ or https://sx-my-app.herokuapp.com/
+Go to https://www.stephenx.tech/ or https://www.stephenx.live/ or https://sx-my-app.herokuapp.com/ or https://www.stephenxie.com/
 ## Resources
 **[Tailwind Documentation](https://tailwindcss.com/docs)** - Documentation for tailwind css and how to use it  
 [Tailwind Kit](https://www.tailwind-kit.com/) - They have some nice css components  
