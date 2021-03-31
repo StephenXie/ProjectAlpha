@@ -25,7 +25,7 @@ SECRET_KEY = 'zt!y%yiemha(heptb2q69jt)0n2j+7nuqry)2ef54(hnpgf532'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'sx-my-app.herokuapp.com', 'ww.stephenxie.com','www.stephenx.live', 'www.stephenx.tech']
+ALLOWED_HOSTS = ['127.0.0.1', 'sx-my-app.herokuapp.com', 'www.stephenxie.com','www.stephenx.live', 'www.stephenx.tech']
 
 
 # Application definition
