@@ -7,9 +7,9 @@
 </header>
 
 <div class ="w3-container w3-center bg-yellow-100" style="padding:256px 16px">
-    <span class="w3-xlarge text-blue-500 block font-bold xl:inline">Your Weighted GPA: {{GPA_w}}</span>
+    <span class="w3-xlarge text-blue-500 block font-bold xl:inline">Weighted GPA: {{GPA_w}}</span>
     <br>
-    <span class="w3-xlarge text-blue-400 block font-bold xl:inline">Your Unweighted GPA: {{GPA_u}}</span>
+    <span class="w3-xlarge text-blue-400 block font-bold xl:inline">Unweighted GPA: {{GPA_u}}</span>
     <br>
     <form action="/GPAcal/" id="form" method = "post" style = "text-align:center;">
         {% csrf_token %}
