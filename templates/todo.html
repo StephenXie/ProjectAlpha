@@ -26,7 +26,7 @@
                     Delete
                   </button>
                   {% else %}
-                  <button type="submit" disabled="" value="Delete" class="cursor-not-allowed py-2 px-4 bg-gradient-to-r from-red-400 to-blue-500 transform hover:scale-110 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg">
+                  <button type="button" value="Unauth" class="py-2 px-4 bg-gradient-to-r from-red-400 to-blue-500 transform hover:scale-110 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"onclick="toggleModal('modal-id')">
                     Delete
                   </button>
                   {% endif %}
@@ -44,9 +44,41 @@
         {% if auth %}
         <button type="submit" value="Add" style="width:20%;"class="inline max-x-xs py-2 px-3  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">Add</button>
         {% else %}
-        <button type="submit" disabled=""value="Add" style="width:20%;"class="cursor-not-allowed inline max-x-xs py-2 px-3  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">Add</button>
+        <button type="button" value="Add" style="width:20%;"class="inline max-x-xs py-2 px-3  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "onclick="toggleModal('modal-id')">Add</button>
         {% endif %}
     </div>
 </form>
-
+<div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="modal-id">
+  <div class="relative w-auto my-6 mx-auto max-w-sm">
+    <!--content-->
+    <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+      <!--header-->
+      <div class="flex items-start justify-between border-b border-solid border-blueGray-200 rounded-t" style="text-align: center">
+        <h3 class="text-3xl mx-auto font-semibold">
+          Login
+        </h3>
+      </div>
+      <!--body-->
+      <div class="relative p-6 flex-auto">
+        <p class="my-4 text-blueGray-500 text-lg leading-relaxed">
+          You need to login lol
+        </p>
+      </div>
+      <div class="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+        <button class="text-center text-red-500 background-transparent font-bold uppercase mx-auto py-2 text-sm outline-none focus:outline-none ease-linear transition-all duration-150" type="button" onclick="toggleModal('modal-id')">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hidden opacity-25 fixed inset-0 z-40 bg-black" id="modal-id-backdrop"></div>
+<script type="text/javascript">
+  function toggleModal(modalID){
+    document.getElementById(modalID).classList.toggle("hidden");
+    document.getElementById(modalID + "-backdrop").classList.toggle("hidden");
+    document.getElementById(modalID).classList.toggle("flex");
+    document.getElementById(modalID + "-backdrop").classList.toggle("flex");
+  }
+</script>
 {% endblock %}
