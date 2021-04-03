@@ -1,23 +1,28 @@
-def getGPA_w(score_arr,weight_arr):
+def getGPA_w(score_arr,weight_arr,credit_arr):
     res = 0
+    credit = 0
     for i in range(len(score_arr)):
         temp = scoreToVal(score_arr[i])
         temp = getWeighted(temp,weight_arr[i])
         res+=temp
-    return res/len(score_arr)
+        credit += float(credit_arr[i])
+    return res/credit
 
-def getGPA_u(score_arr,weight_arr):
+def getGPA_u(score_arr,weight_arr,credit_arr):
     res = 0
+    credit = 0
     for i in range(len(score_arr)):
         temp = scoreToVal(score_arr[i])
         res+=temp
-    return res/len(score_arr)
+        credit += float(credit_arr[i])
+    return res/credit
 
 def getMaxGPA(weight_arr):
     res = 0
     for i in range(len(weight_arr)):
         res+=getWeighted(4,weight_arr[i])
     return res/len(weight_arr)
+
 def scoreToVal(grade):
     dic = {
         "A+":4.3,
@@ -35,6 +40,7 @@ def scoreToVal(grade):
         "F":0
     }
     return dic[grade]
+
 def getWeighted(score,t):
     """
     H
