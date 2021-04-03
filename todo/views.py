@@ -21,6 +21,7 @@ def todoView(request):
     items = []
     for i in all_todo_items:
         items.append(item(i.date,i.content,i.id))
+    items.sort(key=lambda x:x.id)
     return render(request, 'todo.html',
                   {'all_items': all_todo_items,'items':items,'auth':request.user.is_authenticated})
 
