@@ -56,7 +56,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <a class="text-gray-800  hover:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium" href="/GPAcal">
                           GPAC
                         <a class="text-gray-800  hover:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium" href="/pastex">
-                          PasteX
+                          Paste
                       </a>
                     </div>
                 </div>
@@ -66,7 +66,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
             <div class="-mr-2 flex md:hidden">
-                <button class="text-gray-800 dark:text-white hover:text-gray-300 inline-flex items-center justify-center p-2 rounded-md focus:outline-none">
+                <button onclick="myFunction()" title="Toggle Navigation Menu" class="text-gray-800 dark:text-white hover:text-gray-300 inline-flex items-center justify-center p-2 rounded-md focus:outline-none">
                     <svg width="20" height="20" fill="currentColor" class="h-8 w-8" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1664 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z">
                         </path>
@@ -75,7 +75,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
     </div>
-    <div class="md:hidden">
+    <div id="navDemo" class="md:hidden hidden">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <a class="text-gray-800 hover:text-gray-300 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="..">
               Home
@@ -116,10 +116,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   // Used to toggle the menu on small screens when clicking on the menu button
   function myFunction() {
     var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-      x.className += " w3-show";
+    if (x.className.indexOf(" hidden") == -1) {
+      x.className += " hidden";
     } else { 
-      x.className = x.className.replace(" w3-show", "");
+      x.className = x.className.replace(" hidden", "");
     }
   }
   </script>
