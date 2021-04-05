@@ -50,6 +50,6 @@ def getWeighted(score,t):
     AP
     4 -> 5
     """
-    if t:
+    if t!="R":
         score+=1
     return score
