@@ -7,7 +7,7 @@
 </header>
 <div class="container flex flex-col mx-auto max-w-full items-center justify-center">
 {% if item_id %}
-<div class="border shadow font-bold text-lg mt-6 mb-3 p-4">
+<div class="border shadow font-bold text-lg rounded-lg mt-6 mb-3 p-4">
 URL: 
 <a class="text-blue-500 underline" href="/pastex/?q={{item_id}}">{{ request.build_absolute_uri }}?q={{item_id}}</a>
 </div>
