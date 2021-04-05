@@ -16,7 +16,6 @@ def PasteXView(request):
         new_item = PasteXItem(content=request.POST.get('content'))
         new_item.save()
         url = request.build_absolute_uri
-        print(str(url))
         return render(request,"pastex.html",{'item_id':new_item.id})
     else:
         # show html
