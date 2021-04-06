@@ -1,13 +1,12 @@
 {% extends 'base.html' %}
 {% block title %}PasteX - Stephen X{% endblock %}
 {% block content %}
-<header class="w3-container w3-red w3-center" style="padding:128px 16px">
-    <h1 class="w3-margin w3-jumbo">Stephen Xie</h1>
-    <p class="w3-xlarge">PasteX</p>
-</header>
-<div class="container bg-blue-400 flex flex-col mx-auto max-w-full items-center justify-center">
+<div class="w3-container text-white w3-center" style="background-image: url(https://images.pexels.com/photos/1424246/pexels-photo-1424246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940); padding:128px 16px;">
+<h1 class="w3-margin w3-jumbo text-white font-extrabold">PasteX</h1>
+<p class="w3-xlarge">Paste your text here and get a link that you can copy and paste across devices</p>
+<div class="container flex flex-col mx-auto max-w-full items-center justify-center">
 {% if item_id %}
-<div class="bg-white border shadow font-bold text-lg rounded-lg mt-6 mb-3 p-4">
+<div class="bg-white text-black border shadow font-bold text-lg rounded-lg mt-6 mb-3 p-4">
 URL: 
 <a class="text-blue-500 underline" href="/pastex/?q={{item_id}}">{{ request.build_absolute_uri }}?q={{item_id}}</a>
 </div>
@@ -18,5 +17,5 @@ URL:
 <button type="submit" value="submit" class="inline max-x-xs py-2 px-3  bg-pink-500 hover:bg-pink-600 focus:ring-pink-500 focus:ring-offset-pink-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">Submit</button>
 </form>
 </div>
-
+</div>
 {% endblock %}
