@@ -32,32 +32,33 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N57ZLMB"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<nav class="bg-white fixed w-full dark:bg-gray-800 " style="z-index: 9999;">
+<nav id="navbar" class="bg-white md:bg-opacity-0 fixed w-full dark:bg-gray-800 " style="z-index: 9999;">
     <div class="max-w-full mx-auto px-8">
         <div class="flex items-center justify-between h-16">
             <div class=" flex items-center">
                 <a class="flex-shrink-0" href="/">
-                    <img class="h-8 w-8" src="https://stephenxie.me/images/avatar.png"/>
+                    <img class="h-8 w-8" src="https://raw.githubusercontent.com/StephenXie/StephenXie.github.io/master/images/avatar_white%20-%20round.png?token=ALZMRGZHFHVKUSHSA3HAYQTAOZL6G"/>
                 </a>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
-                        <a class="text-gray-800  hover:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium" href="..">
+                        <a class="text-white  hover:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium" href="..">
                           Home
                         </a>
-                        <a class="text-gray-800  hover:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium" href="/todo">
+                        <a class="text-white  hover:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium" href="/todo">
                           Todo
                         </a>
-                        <a class="text-gray-800  hover:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium" href="/formatter">
+                        <a class="text-white  hover:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium" href="/formatter">
                           Formatter
                         </a>
-                        <a class="text-gray-800  hover:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium" href="/cryptic">
+                        <a class="text-white  hover:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium" href="/cryptic">
                           Cryptic
                         </a>
-                        <a class="text-gray-800  hover:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium" href="/GPAcal">
+                        <a class="text-white  hover:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium" href="/GPAcal">
                           GPAC
-                        <a class="text-gray-800  hover:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium" href="/pastex">
+                         </a>
+                        <a class="text-white  hover:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium" href="/pastex">
                           PasteX
-                      </a>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -66,7 +67,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
             <div class="-mr-2 flex md:hidden">
-                <button onclick="myFunction()" title="Toggle Navigation Menu" class="text-gray-800 dark:text-white hover:text-gray-300 inline-flex items-center justify-center p-2 rounded-md focus:outline-none">
+                <button onclick="navMenu()" title="Toggle Navigation Menu" class="text-gray-800 dark:text-white hover:text-gray-300 inline-flex items-center justify-center p-2 rounded-md focus:outline-none">
                     <svg width="20" height="20" fill="currentColor" class="h-8 w-8" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1664 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z">
                         </path>
@@ -114,12 +115,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <script>
   // Used to toggle the menu on small screens when clicking on the menu button
-  function myFunction() {
+  function navMenu() {
     var x = document.getElementById("navDemo");
     if (x.className.indexOf(" hidden") == -1) {
       x.className += " hidden";
     } else { 
       x.className = x.className.replace(" hidden", "");
+    }
+  }
+  </script>
+  <script>
+  window.onscroll = function() {navbarColor()};
+
+  function navbarColor() {
+    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+      document.getElementById("navbar").className = document.getElementById("navbar").className.replace("md:bg-opacity-0","md:bg-opacity-100");
+      var childDivs = document.getElementById('navbar').getElementsByTagName('a');
+      for( i=0; i< childDivs.length; i++ )
+      {
+      childDivs[i].className = childDivs[i].className.replace("text-white","text-gray-800");
+      }
+    } else {
+      document.getElementById("navbar").className = document.getElementById("navbar").className.replace("md:bg-opacity-100","md:bg-opacity-0");
+      var childDivs = document.getElementById('navbar').getElementsByTagName('a');
+      for( i=0; i< childDivs.length; i++ )
+      {
+      childDivs[i].className = childDivs[i].className.replace("text-gray-800","text-white");
+      }
     }
   }
   </script>
