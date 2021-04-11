@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'formatter.apps.FormatterConfig',
     'cryptic.apps.CrypticConfig',
     'GPAcal.apps.GpacalConfig',
+    'PasteX.apps.PastexConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
