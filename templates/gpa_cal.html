@@ -3,7 +3,7 @@
 {% block content %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <header class="w3-container bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 w3-center" style="padding:128px 12px">
-    <h1 class="w3-margin w3-jumbo font-sans text-white font-extrabold"><span class="text-green-300">Epic GPA </span>Calculator</h1>
+    <h1 class="w3-margin w3-jumbo font-sans text-white font-extrabold"><span class="text-green-300">GPA</span> Calculator</h1>
 </header>
 
 <div class ="w3-container w3-center bg-yellow-100" style="padding:256px 16px">
@@ -11,18 +11,24 @@
         <p class="w3-xlarge text-blue-500 font-bold xl:inline">Your Weighted GPA: {{GPA_w}}</p><br>
         <p class="w3-xlarge text-blue-400 font-bold xl:inline">Your Unweighted GPA: {{GPA_u}}</p>
     </div>
+    <div id="grade-bar" class="space-y-3 bg-opacity-0 rounded-lg block p-4 m-auto">
+        <div>
+            <div class="inline-block w-48 text-right">Unweighted percentage: </div><br>
+            <div class="inline-block w-72 h-4 shadow bg-gray-400 rounded-full mt-3">
+                <div class="h-full text-center text-xs text-white bg-blue-500 rounded-full" style="width: {{pct_u}};">
+                    {{pct_u}}
+                </div>
+            </div>
+        </div>
 
-    <div id="grade-bar" class="bg-opacity-0 rounded-lg w-72 block p-4 m-auto">
-        <div class="w-full h-4 shadow bg-gray-400 rounded-full mt-3">
-            <div class="h-full text-center text-xs text-white bg-blue-500 rounded-full" style="width: {{pct_u}};">
-                {{pct_u}}
+        <div>
+            <div class="inline-block w-48 text-right">Weighted percentage: </div><br>
+            <div class="inline-block w-72 h-4 shadow bg-gray-400 rounded-full mt-3">
+                <div class="h-full text-center text-xs text-white bg-red-500 rounded-full" style="width: {{pct_w}};">
+                    {{pct_w}}
+                </div>
             </div>
-        </div>
-        <div class="w-full h-4 shadow bg-gray-400 rounded-full mt-3">
-            <div class="h-full text-center text-xs text-white bg-red-500 rounded-full" style="width: {{pct_w}};">
-                {{pct_w}}
-            </div>
-        </div>
+        </div>  
     </div>
     <form action="/GPAcal/" id="form" method = "post" style = "text-align:center;">
         {% csrf_token %}
