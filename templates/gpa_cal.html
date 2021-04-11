@@ -14,21 +14,25 @@
     
     <div id="grade-bar" class="bg-opacity-0 rounded-lg block p-4 m-auto">
         <div>
-            <div class="inline-block w-48 text-right"><p>Unweighted percentage: </p></div>
-            <div class="inline-block w-72 h-4 shadow bg-gray-400 rounded-full mt-3">
+            <div>Unweighted percentage ({{GPA_u}}/4): </div>
+            <div class="inline-block">0</div>
+            <div class="inline-block h-4 w-72 shadow bg-gray-400 rounded-full">
                 <div class="h-full text-center text-xs text-white bg-blue-500 rounded-full" style="width: {{pct_u}};">
                     {{pct_u}}
                 </div>
             </div>
+            <div class="inline-block">4</div>
         </div>
 
-        <div>
-            <div class="inline-block w-48 text-right"><p>Weighted percentage: </p></div>
-            <div class="inline-block w-72 h-4 shadow bg-gray-400 rounded-full mt-3">
+        <div class="mt-3">
+            <div>Weighted percentage ({{GPA_w}}/{{max_GPA}}): </div>
+            <div class="inline-block">0</div>
+            <div class="inline-block h-4 w-72 shadow bg-gray-400 rounded-full">
                 <div class="h-full text-center text-xs text-white bg-red-500 rounded-full" style="width: {{pct_w}};">
                     {{pct_w}}
                 </div>
             </div>
+            <div class="inline-block">{{max_GPA}}</div>
         </div>
         
         
