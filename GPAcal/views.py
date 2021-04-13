@@ -20,5 +20,5 @@ def GPAcal(request):
     pct_w = round(pct_w,2)
     GPA_w = round(GPA_w,2)
     GPA_u = round(GPA_u,2)
-    args = {"GPA_w":GPA_w, "GPA_u":GPA_u, "pct_u":str(pct_u)+"%", "pct_w":str(pct_w)+"%"}
+    args = {"GPA_w":GPA_w, "GPA_u":GPA_u, "max_GPA":round(max_GPA,2), "pct_u":str(pct_u)+"%", "pct_w":str(pct_w)+"%"}
     return render(request,'gpa_cal.html',args)
