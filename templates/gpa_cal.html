@@ -29,7 +29,7 @@
                     {{pct_w}}
                 </div>
             </div>
-            <div class="inline-block absolute text-left">{{max_GPA}}</div>
+            <div class="inline-block absolute ml-1 text-left">{{max_GPA}}</div>
         </div>
     </div>
     <form action="/GPAcal/" id="form" method = "post" style = "text-align:center;">
@@ -98,7 +98,9 @@
                 </script>
             </div>
         </div>
-        <button class="py-2 px-3 bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white transition ease-in-out duration-300 delay-100 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg" type="submit">Submit</button>
+        
+        <button id="submit" class="py-2 px-3 bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white transition ease-in-out duration-300 delay-100 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg" type="submit">Submit</button>
+        
     </form>
 </div>
 {% endblock %}
