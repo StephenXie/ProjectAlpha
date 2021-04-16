@@ -5,7 +5,7 @@ from django.views import View
 from GPAcal.scripts import getGPA_w, getGPA_u, getMaxGPA
 # Create your views here.
 def GPAcal(request):
-    GPA_u = GPA_w = max_GPA = 4
+    GPA_u = GPA_w = max_GPA = 4.0
     if request.method == "POST":
         classes = request.POST.getlist("class_name")
         grades = request.POST.getlist("grade")

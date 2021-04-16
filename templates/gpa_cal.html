@@ -12,8 +12,8 @@
         <p class="w3-xlarge text-blue-400 font-bold xl:inline">Your Unweighted GPA: {{GPA_u}}</p>
     </div>
     <div id="grade-bar" class="bg-opacity-0 rounded-lg block p-4 m-auto">
-        <div>
-            <div>Unweighted percentage ({{GPA_u}}/4.0): </div>
+        <span class="m-2">Unweighted percentage ({{GPA_u}}/4.0): </span>
+        <div class="m-2">
             <div class="inline-block">0.0</div>
             <div class="inline-block h-4 w-72 shadow bg-gray-400 rounded-full">
                 <div class="h-full text-center text-xs text-white bg-blue-500 rounded-full" style="width: {{pct_u}};">
@@ -22,14 +22,15 @@
             </div>
             <div class="inline-block">4.0</div>
         </div>
-        <div class="mt-3 text-center">
-            <span>Weighted percentage ({{GPA_w}}/{{max_GPA}}): </span><br>
-            <div class="inline-block h-4 w-72 shadow bg-gray-400 rounded-full">
+        <span class="m-2">Weighted percentage ({{GPA_w}}/{{max_GPA}}): </span>
+        <div class="m-2 flex text-center">
+            <div class="inline-block flex-1 mr-1 text-right">0.0</div>
+            <div class="inline-block h-4 w-72 shadow bg-gray-400 rounded-full" style="width: {{pct_w}} flex:5;">
                 <div class="h-full text-center text-xs text-white bg-red-500 rounded-full" style="width: {{pct_w}};">
                     {{pct_w}}
                 </div>
             </div>
-            <div class="inline-block absolute ml-1 text-left">{{max_GPA}}</div>
+            <div class="inline-block flex-1 ml-1 text-left">{{max_GPA}}</div>
         </div>
     </div>
     <form action="/GPAcal/" id="form" method = "post" style = "text-align:center;">
