@@ -7,7 +7,7 @@
 
 name: Labeler
 on: [pull_request]
-
+uses: actions/labeler@v3
 jobs:
   label:
 
