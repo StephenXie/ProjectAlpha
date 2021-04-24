@@ -1,4 +1,4 @@
-# WebProjectX
+# ProjectAlpha
 ## Where can I find this *AWESOME* website?
 Go to https://www.stephenx.tech/ or https://www.stephenx.live/ or https://sx-my-app.herokuapp.com/ or https://www.stephenxie.com/
 ## Resources
@@ -33,7 +33,7 @@ python manage.py runserver
 - add and delete class button
   - implemented using JS and JQuery
 - input fields: class name(optional), grade, weight
-- all button and input fields are powered with some *nice* CSS and are *interactive*
+- all button and input fields are powered with some *nice* CSS
   - currently using Tailwind CSS
   - might switch to bootstrap later
 - part of a student advisory center concept
