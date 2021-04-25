@@ -80,21 +80,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div id="navDemo" class="md:hidden hidden">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a class="text-gray-800 hover:text-gray-300 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="..">
+            <a class="text-gray-800 md:text-gray-800 hover:text-gray-300 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="..">
               Home
             </a>
-            <a class="text-gray-800 hover:text-gray-300 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/todo">
+            <a class="text-gray-800 md:text-gray-800 hover:text-gray-300 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/todo">
               Todo
             </a>
-            <a class="text-gray-800 hover:text-gray-300 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/formatter">
+            <a class="text-gray-800 md:text-gray-800 hover:text-gray-300 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/formatter">
               Formatter
             </a>
-            <a class="text-gray-800 hover:text-gray-300 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/cryptic">
+            <a class="text-gray-800 md:text-gray-800 hover:text-gray-300 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/cryptic">
               Cryptic
             </a>
-            <a class="text-gray-800 hover:text-gray-300 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/GPAcal">
+            <a class="text-gray-800 md:text-gray-800 hover:text-gray-300 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/GPAcal">
               GPAC
-            <a class="text-gray-800 hover:text-gray-300 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/pastex">
+            <a class="text-gray-800 md:text-gray-800 hover:text-gray-300 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/pastex">
               PasteX
           </a>
         </div>
@@ -135,14 +135,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       var childDivs = document.getElementById('navbar').getElementsByTagName('a');
       for( i=0; i< childDivs.length; i++ )
       {
-      childDivs[i].className = childDivs[i].className.replace("text-white","text-gray-800");
+      childDivs[i].className = childDivs[i].className.replace("md:text-white","md:text-gray-800");
       }
     } else {
       document.getElementById("navbar").className = document.getElementById("navbar").className.replace("md:bg-opacity-100","md:bg-opacity-0");
       var childDivs = document.getElementById('navbar').getElementsByTagName('a');
       for( i=0; i< childDivs.length; i++ )
       {
-      childDivs[i].className = childDivs[i].className.replace("text-gray-800","text-white");
+      childDivs[i].className = childDivs[i].className.replace("md:text-gray-800","md:text-white");
       }
     }
   }
