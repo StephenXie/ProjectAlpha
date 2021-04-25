@@ -7,7 +7,7 @@ Go to https://www.stephenx.tech/ or https://www.stephenx.live/ or https://sx-my-
 [Django Documentation](https://docs.djangoproject.com/en/3.1/) - Documentation for django, pretty useful  
 [Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql) - How to use the database  
 ## Local usage
-Make sure you have python 3.6(untested w/ python 3.2) or above  
+Make sure you have python 3.6 or above  
 First, download all of the dependencies needed  
 ```
 pip install -r requirements.txt
