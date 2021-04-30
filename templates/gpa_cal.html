@@ -33,6 +33,14 @@
             <div class="inline-block flex-1 ml-1 text-left">{{max_GPA}}</div>
         </div>
     </div>
+    <div class="flex justify-center">
+        <div style="width:500px;" class="flex justify-start">
+            <p class="inline-block w-40">Class</p>
+            <p class="inline-block w-20">Grade</p>
+            <p class="inline-block w-24">Weight</p>
+            <p class="inline-block w-28">Credit</p>
+        </div>
+    </div>
     <form action="/GPAcal/" id="form" method = "post" style = "text-align:center;">
         {% csrf_token %}
         <div class="max-w-full m-auto">
