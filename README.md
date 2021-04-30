@@ -1,13 +1,13 @@
 # ProjectAlpha
 ## Where can I find this *AWESOME* website?
 Go to https://www.stephenx.tech/ or https://www.stephenx.live/ or https://sx-my-app.herokuapp.com/ or https://www.stephenxie.com/
+## Wiki
+**Go to the [Wiki page](https://github.com/QLSCO/ProjectAlpha/wiki) for more information and fun facts about this project**
 ## Resources
 **[Tailwind Documentation](https://tailwindcss.com/docs)** - Documentation for tailwind css and how to use it  
 [Tailwind Kit](https://www.tailwind-kit.com/) - They have some nice css components  
 [Django Documentation](https://docs.djangoproject.com/en/3.1/) - Documentation for django, pretty useful  
 [Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql) - How to use the database  
-## Wiki
-**Go to the [Wiki page](https://github.com/QLSCO/ProjectAlpha/wiki) for more information and fun facts about this project**
 ## Local usage
 Make sure you have python 3.6 or above  
 First, download all of the dependencies needed  
