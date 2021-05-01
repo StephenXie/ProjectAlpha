@@ -1,6 +1,8 @@
 # ProjectAlpha
 ## Where can I find this *AWESOME* website?
 Go to https://www.stephenx.tech/ or https://www.stephenx.live/ or https://sx-my-app.herokuapp.com/ or https://www.stephenxie.com/
+## Wiki
+**Go to the [Wiki page](https://github.com/QLSCO/ProjectAlpha/wiki) for more information and fun facts about this project**
 ## Resources
 **[Tailwind Documentation](https://tailwindcss.com/docs)** - Documentation for tailwind css and how to use it  
 [Tailwind Kit](https://www.tailwind-kit.com/) - They have some nice css components  
