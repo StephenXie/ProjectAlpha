@@ -1,7 +1,5 @@
 # ProjectAlpha
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
-<!--- [![Build Status](https://travis-ci.com/QLSCO/ProjectAlpha.svg?branch=master)](https://travis-ci.com/QLSCO/ProjectAlpha)
---->
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![GitHub issues](https://img.shields.io/github/issues/QLSCO/ProjectAlpha)](https://GitHub.com/QLSCO/ProjectAlpha/issues/)
 ## Where can I find this *AWESOME* website?
 Go to https://www.stephenx.tech/ or https://www.stephenx.live/ or https://sx-my-app.herokuapp.com/ or https://www.stephenxie.com/
 ## Wiki
