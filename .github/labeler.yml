@@ -2,4 +2,4 @@
 frontend:
 - templates/*.html
 backend:
-- */*.py
+- *.py
