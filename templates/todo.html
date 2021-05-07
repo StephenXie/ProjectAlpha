@@ -2,58 +2,68 @@
 {% block title %}Todo - Stephen X{% endblock %}
 {% block content %}
 <header class="w3-container w3-red w3-center" style="padding:128px 16px">
-    <h1 class="w3-margin w3-jumbo">Stephen Xie</h1>
-    <p class="w3-xlarge">Todo List</p>
+  <h1 class="w3-margin w3-jumbo">Stephen Xie</h1>
+  <p class="w3-xlarge">Todo List</p>
 </header>
 <div class="container flex flex-col mx-2 md:mx-auto max-w-full md:w-3/5 w-11/12 items-center justify-center">
-<ul class="w-full flex flex-col">
+  <ul class="w-full flex flex-col">
     {% for todo_item in items %}
-        <li class="border-gray-400 flex flex-row mb-2">
-            <div class="shadow border select-none cursor-pointer bg-white dark:bg-gray-800 rounded-md flex flex-1 items-center p-4">
-                <div class="flex-1 pl-1 mr-16">
-                    <div class="font-medium dark:text-white">
-                        {{todo_item.content}}
-                    </div>
-                </div>
-                <div class="text-gray-600 dark:text-gray-200 text-xs mr-8">
-                    {{todo_item.date}}
-                </div>
-            <form action = "/deleteTodo/{{todo_item.id}}/"
-                  style = "display:inline;"
-                  method = "post">{% csrf_token %}
-                  {% if auth %}
-                  <button type="submit" value="Delete" class="py-2 px-4 bg-gradient-to-r from-red-400 to-blue-500 transform hover:scale-110 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg">
-                    Delete
-                  </button>
-                  {% else %}
-                  <button type="button" value="Unauth" class="py-2 px-4 bg-gradient-to-r from-red-400 to-blue-500 transform hover:scale-110 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"onclick="toggleModal('modal-id')">
-                    Delete
-                  </button>
-                  {% endif %}
-            </form>
-            </div>
-        </li>
+    <li class="border-gray-400 flex flex-row mb-2">
+      <div
+        class="shadow border select-none cursor-pointer bg-white dark:bg-gray-800 rounded-md flex flex-1 items-center p-4">
+        <div class="flex-1 pl-1 mr-16">
+          <div class="font-medium dark:text-white">
+            {{todo_item.content}}
+          </div>
+        </div>
+        <div class="text-gray-600 dark:text-gray-200 text-xs mr-8">
+          {{todo_item.date}}
+        </div>
+        <form action="/deleteTodo/{{todo_item.id}}/" style="display:inline;" method="post">{% csrf_token %}
+          {% if auth %}
+          <button type="submit" value="Delete"
+            class="py-2 px-4 bg-gradient-to-r from-red-400 to-blue-500 transform hover:scale-110 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg">
+            Delete
+          </button>
+          {% else %}
+          <button type="button" value="Unauth"
+            class="py-2 px-4 bg-gradient-to-r from-red-400 to-blue-500 transform hover:scale-110 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+            onclick="toggleModal('modal-id')">
+            Delete
+          </button>
+          {% endif %}
+        </form>
+      </div>
+    </li>
     {% endfor %}
-</ul>
+  </ul>
 </div>
 <br>
 
-<form action = "/addTodo/" method = "post" style = "text-align:center;">{% csrf_token %}
-    <div class="flex max-w-md mx-2 md:m-auto">
-        <input style="width:20%;"class="inline w-2/5 m-auto rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" name="content"/>
-        {% if auth %}
-        <button type="submit" value="Add" style="width:20%;"class="inline max-x-xs py-2 px-3  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">Add</button>
-        {% else %}
-        <button type="button" value="Add" style="width:20%;"class="inline max-x-xs py-2 px-3  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "onclick="toggleModal('modal-id')">Add</button>
-        {% endif %}
-    </div>
+<form action="/addTodo/" method="post" style="text-align:center;">{% csrf_token %}
+  <div class="flex max-w-md mx-2 md:m-auto">
+    <input style="width:20%;"
+      class="inline w-2/5 m-auto rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+      type="text" name="content" />
+    {% if auth %}
+    <button type="submit" value="Add" style="width:20%;"
+      class="inline max-x-xs py-2 px-3  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">Add</button>
+    {% else %}
+    <button type="button" value="Add" style="width:20%;"
+      class="inline max-x-xs py-2 px-3  bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
+      onclick="toggleModal('modal-id')">Add</button>
+    {% endif %}
+  </div>
 </form>
-<div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="modal-id">
+<div
+  class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center"
+  id="modal-id">
   <div class="relative w-auto my-6 mx-auto max-w-sm">
     <!--content-->
     <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
       <!--header-->
-      <div class="flex items-start justify-between border-b border-solid border-blueGray-200 rounded-t" style="text-align: center">
+      <div class="flex items-start justify-between border-b border-solid border-blueGray-200 rounded-t"
+        style="text-align: center">
         <h3 class="text-3xl mx-auto font-semibold">
           Login
         </h3>
@@ -65,7 +75,9 @@
         </p>
       </div>
       <div class="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
-        <button class="text-center text-red-500 background-transparent font-bold uppercase mx-auto py-2 text-sm outline-none focus:outline-none ease-linear transition-all duration-150" type="button" onclick="toggleModal('modal-id')">
+        <button
+          class="text-center text-red-500 background-transparent font-bold uppercase mx-auto py-2 text-sm outline-none focus:outline-none ease-linear transition-all duration-150"
+          type="button" onclick="toggleModal('modal-id')">
           Close
         </button>
       </div>
@@ -74,7 +86,7 @@
 </div>
 <div class="hidden opacity-30 fixed inset-0 z-40 bg-black" id="modal-id-backdrop"></div>
 <script type="text/javascript">
-  function toggleModal(modalID){
+  function toggleModal(modalID) {
     document.getElementById(modalID).classList.toggle("hidden");
     document.getElementById(modalID + "-backdrop").classList.toggle("hidden");
     document.getElementById(modalID).classList.toggle("flex");

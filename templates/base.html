@@ -1,151 +1,189 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-N57ZLMB');</script>
-    <!-- End Google Tag Manager -->
-    <meta charset="UTF-8">
-    <title>{% block title %}Stephen X{% endblock %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://stephenxie.github.io/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="https://stephenxie.github.io/images/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://stephenxie.github.io/images/favicon-16x16.png">
-    <link rel="stylesheet" href="https://stephenxie.me/assets/css/tailwind-output.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/monokai-sublime.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-    <style>
-    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
-    .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
-    .fa-anchor,.fa-coffee {font-size:200px}
-    </style>
-    <script data-ad-client="ca-pub-5373791652780979" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-N57ZLMB');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <title>{% block title %}Stephen X{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://stephenxie.github.io/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://stephenxie.github.io/images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://stephenxie.github.io/images/favicon-16x16.png">
+  <link rel="stylesheet" href="https://stephenxie.me/assets/css/tailwind-output.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/monokai-sublime.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Lato", sans-serif
+    }
+
+    .w3-bar,
+    h1,
+    button {
+      font-family: "Montserrat", sans-serif
+    }
+
+    .fa-anchor,
+    .fa-coffee {
+      font-size: 200px
+    }
+  </style>
+  <script data-ad-client="ca-pub-5373791652780979" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
+
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N57ZLMB"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<nav id="navbar" class="bg-white md:bg-opacity-0 fixed w-full dark:bg-gray-800 " style="z-index: 9999;">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N57ZLMB" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <nav id="navbar" class="bg-white md:bg-opacity-0 fixed w-full dark:bg-gray-800 " style="z-index: 9999;">
     <div class="max-w-full mx-auto px-8">
-        <div class="flex items-center justify-between h-16">
-            <div class=" flex items-center">
-                <a class="flex-shrink-0" href="/">
-                    <img class="h-8 w-8" src="https://stephenxie.me/images/avatar_white%20-%20round.png"/>
-                </a>
-                <div class="hidden md:block">
-                    <div class="ml-6 flex items-baseline space-x-4">
-                        <a class="text-white md:text-white hover:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium" href="..">
-                          Home
-                        </a>
-                        <a class="text-white md:text-white hover:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium" href="/todo">
-                          Todo
-                        </a>
-                        <a class="text-white md:text-white hover:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium" href="/formatter">
-                          Formatter
-                        </a>
-                        <a class="text-white md:text-white hover:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium" href="/cryptic">
-                          Cryptic
-                        </a>
-                        <a class="text-white md:text-white hover:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium" href="/GPAcal">
-                          GPAC
-                         </a>
-                        <a class="text-white md:text-white hover:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium" href="/pastex">
-                          PasteX
-                        </a>
-                    </div>
-                </div>
+      <div class="flex items-center justify-between h-16">
+        <div class=" flex items-center">
+          <a class="flex-shrink-0" href="/">
+            <img class="h-8 w-8" src="https://stephenxie.me/images/avatar_white%20-%20round.png" />
+          </a>
+          <div class="hidden md:block">
+            <div class="ml-6 flex items-baseline space-x-4">
+              <a class="text-white md:text-white hover:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium"
+                href="..">
+                Home
+              </a>
+              <a class="text-white md:text-white hover:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium"
+                href="/todo">
+                Todo
+              </a>
+              <a class="text-white md:text-white hover:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium"
+                href="/formatter">
+                Formatter
+              </a>
+              <a class="text-white md:text-white hover:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium"
+                href="/cryptic">
+                Cryptic
+              </a>
+              <a class="text-white md:text-white hover:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium"
+                href="/GPAcal">
+                GPAC
+              </a>
+              <a class="text-white md:text-white hover:text-gray-300 dark:hover:text-white px-3 py-2 rounded-md text-lg font-medium"
+                href="/pastex">
+                PasteX
+              </a>
             </div>
-            <div class="block">
-                <div class="ml-4 flex items-center md:ml-6">
-                </div>
-            </div>
-            <div class="-mr-2 flex md:hidden">
-                <button onclick="navMenu()" title="Toggle Navigation Menu" class="text-gray-800 dark:text-white hover:text-gray-300 inline-flex items-center justify-center p-2 rounded-md focus:outline-none">
-                    <svg width="20" height="20" fill="currentColor" class="h-8 w-8" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1664 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z">
-                        </path>
-                    </svg>
-                </button>
-            </div>
+          </div>
         </div>
+        <div class="block">
+          <div class="ml-4 flex items-center md:ml-6">
+          </div>
+        </div>
+        <div class="-mr-2 flex md:hidden">
+          <button onclick="navMenu()" title="Toggle Navigation Menu"
+            class="text-gray-800 dark:text-white hover:text-gray-300 inline-flex items-center justify-center p-2 rounded-md focus:outline-none">
+            <svg width="20" height="20" fill="currentColor" class="h-8 w-8" viewBox="0 0 1792 1792"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M1664 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z">
+              </path>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
     <div id="navDemo" class="md:hidden hidden">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a class="text-gray-800 md:text-gray-800 hover:text-gray-300 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="..">
-              Home
-            </a>
-            <a class="text-gray-800 md:text-gray-800 hover:text-gray-300 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/todo">
-              Todo
-            </a>
-            <a class="text-gray-800 md:text-gray-800 hover:text-gray-300 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/formatter">
-              Formatter
-            </a>
-            <a class="text-gray-800 md:text-gray-800 hover:text-gray-300 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/cryptic">
-              Cryptic
-            </a>
-            <a class="text-gray-800 md:text-gray-800 hover:text-gray-300 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/GPAcal">
-              GPAC
-            <a class="text-gray-800 md:text-gray-800 hover:text-gray-300 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium" href="/pastex">
-              PasteX
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a class="text-gray-800 md:text-gray-800 hover:text-gray-300 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          href="..">
+          Home
+        </a>
+        <a class="text-gray-800 md:text-gray-800 hover:text-gray-300 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          href="/todo">
+          Todo
+        </a>
+        <a class="text-gray-800 md:text-gray-800 hover:text-gray-300 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          href="/formatter">
+          Formatter
+        </a>
+        <a class="text-gray-800 md:text-gray-800 hover:text-gray-300 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          href="/cryptic">
+          Cryptic
+        </a>
+        <a class="text-gray-800 md:text-gray-800 hover:text-gray-300 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          href="/GPAcal">
+          GPAC
+          <a class="text-gray-800 md:text-gray-800 hover:text-gray-300 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            href="/pastex">
+            PasteX
           </a>
-        </div>
+      </div>
     </div>
-</nav>
-{% block content%}
+  </nav>
+  {% block content%}
 
-{% endblock %}
+  {% endblock %}
 
-<footer class="w3-container bg-white w3-padding-64 w3-center bg-opacity-90">  
+  <footer class="w3-container bg-white w3-padding-64 w3-center bg-opacity-90">
     <div class="w3-xlarge w3-padding-32">
-      <a href="https://www.facebook.com/" style="text-decoration: none" class="fa fa-facebook-official w3-hover-opacity"></a>
+      <a href="https://www.facebook.com/" style="text-decoration: none"
+        class="fa fa-facebook-official w3-hover-opacity"></a>
       <a style="text-decoration: none" class="fa fa-instagram w3-hover-opacity"></a>
       <a style="text-decoration: none" class="fa fa-snapchat w3-hover-opacity"></a>
       <a style="text-decoration: none" class="fa fa-pinterest-p w3-hover-opacity"></a>
       <a style="text-decoration: none" class="fa fa-twitter w3-hover-opacity"></a>
       <a style="text-decoration: none" class="fa fa-linkedin w3-hover-opacity"></a>
-   </div>
+    </div>
   </footer>
-  
+
   <script>
-  // Used to toggle the menu on small screens when clicking on the menu button
-  function navMenu() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf(" hidden") == -1) {
-      x.className += " hidden";
-    } else { 
-      x.className = x.className.replace(" hidden", "");
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function navMenu() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf(" hidden") == -1) {
+        x.className += " hidden";
+      } else {
+        x.className = x.className.replace(" hidden", "");
+      }
     }
-  }
   </script>
   <script>
-  window.onscroll = function() {navbarColor()};
+    window.onscroll = function () { navbarColor() };
 
-  function navbarColor() {
-    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-      document.getElementById("navbar").className = document.getElementById("navbar").className.replace("md:bg-opacity-0","md:bg-opacity-100");
-      var childDivs = document.getElementById('navbar').getElementsByTagName('a');
-      for( i=0; i< childDivs.length; i++ )
-      {
-      childDivs[i].className = childDivs[i].className.replace("md:text-white","md:text-gray-800");
-      }
-    } else {
-      document.getElementById("navbar").className = document.getElementById("navbar").className.replace("md:bg-opacity-100","md:bg-opacity-0");
-      var childDivs = document.getElementById('navbar').getElementsByTagName('a');
-      for( i=0; i< childDivs.length; i++ )
-      {
-      childDivs[i].className = childDivs[i].className.replace("md:text-gray-800","md:text-white");
+    function navbarColor() {
+      if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+        document.getElementById("navbar").className = document.getElementById("navbar").className.replace("md:bg-opacity-0", "md:bg-opacity-100");
+        var childDivs = document.getElementById('navbar').getElementsByTagName('a');
+        for (i = 0; i < childDivs.length; i++) {
+          childDivs[i].className = childDivs[i].className.replace("md:text-white", "md:text-gray-800");
+        }
+      } else {
+        document.getElementById("navbar").className = document.getElementById("navbar").className.replace("md:bg-opacity-100", "md:bg-opacity-0");
+        var childDivs = document.getElementById('navbar').getElementsByTagName('a');
+        for (i = 0; i < childDivs.length; i++) {
+          childDivs[i].className = childDivs[i].className.replace("md:text-gray-800", "md:text-white");
+        }
       }
     }
-  }
   </script>
 </body>
+
 </html>
