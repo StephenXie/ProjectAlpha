@@ -18,7 +18,8 @@ def PasteXView(request):
     if request.method == "POST":
         # add item to model and return id
         content = request.POST.get('content')
-        new_id = b64(hashlib.sha256(bytes(content, 'utf8')).hexdigest()).replace("=", "")[:21]
+        new_id = b64(hashlib.sha256(bytes(content, 'utf8')
+                                    ).hexdigest()).replace("=", "")[:21]
         language = request.POST.get('content_type')
         new_item = PasteXItem(content=content, id=new_id, language=language)
         new_item.save()
