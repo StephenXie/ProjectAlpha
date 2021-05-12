@@ -9,8 +9,7 @@ def caesar(text, key):
 def caesar_modify(letter, key):
     if letter.isupper():
         return chr((((ord(letter)-ord("A"))+key)%26)+ord("A"))
-    else:
-        return chr((((ord(letter)-ord("a"))+key)%26)+ord("a"))
+    return chr((((ord(letter)-ord("a"))+key)%26)+ord("a"))
 
 def caesar_brute(text):
     res = []

@@ -1,25 +1,24 @@
 def GetResult(n,style):
     if style == "upper":
         return n.upper()
-    elif style == "lower":
+    if style == "lower":
         return n.lower()
-    elif style == "title":
+    if style == "title":
         return n.title()
-    elif style == "one-line":
+    if style == "one-line":
         res = ""
         for i in list(n):
             if i!="\r" and i!="\n":
                 res+=i
         return res
-    elif style == "space":
+    if style == "space":
         return n.replace(" ","")
-    elif style == "lstrip":
+    if style == "lstrip":
         res = []
         for i in n.split("\n"):
             res.append(i.lstrip())
         return "\n".join(res)
-    else:
-        return n
+    return n
 def GetWordCount(n):
     return len(n.split())
 def GetCharCount(n):
@@ -29,5 +28,4 @@ def twoSum(arr,target):
     for i,n in enumerate(arr):
         if n in hm:
             return [hm[n], i]
-        else:
-            hm[target-n] = i
+        hm[target-n] = i
