@@ -13,7 +13,7 @@ def GPAcal(request):
         class_type = request.POST.getlist("class_type")
         credit = request.POST.getlist("credit")
         GPA_w = getGPA_w(grades, class_type, credit)
-        GPA_u = getGPA_u(grades, class_type, credit)
+        GPA_u = getGPA_u(grades, credit)
         max_GPA = getMaxGPA(class_type)
     pct_u = (GPA_u/4)*100
     pct_u = round(pct_u, 2)

@@ -9,7 +9,7 @@ def getGPA_w(score_arr, weight_arr, credit_arr):
     return res/credit
 
 
-def getGPA_u(score_arr, weight_arr, credit_arr):
+def getGPA_u(score_arr, credit_arr):
     res = 0
     credit = 0
     for i in range(len(score_arr)):
