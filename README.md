@@ -11,7 +11,8 @@ Go to https://www.stephenx.tech/ or https://www.stephenx.live/ or https://sx-my-
 [Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql) - How to use the database  
 ## Local usage
 Make sure you have python 3.6 or above  
-First, download all of the dependencies needed  
+
+First, install all of the dependencies needed  
 ```
 pip install -r requirements.txt
 ```
