@@ -11,7 +11,8 @@ Go to https://www.stephenx.tech/ or https://www.stephenx.live/ or https://sx-my-
 [Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql) - How to use the database  
 ## Local usage
 Make sure you have python 3.6 or above  
-First, download all of the dependencies needed  
+
+First, install all of the dependencies needed  
 ```
 pip install -r requirements.txt
 ```
@@ -36,7 +37,7 @@ python manage.py runserver
 ## GPA Calculator
 - add and delete class button
   - implemented using JS and JQuery
-- input fields: class name(optional), grade, weight
+- input fields: class name(optional), grade, credit, weight
 - all button and input fields are powered with some *nice* CSS
   - currently using Tailwind CSS
   - might switch to bootstrap later
