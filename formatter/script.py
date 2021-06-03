@@ -8,6 +8,8 @@ def GetResult(n, style):
         return n.title()
     if style == "weird":
         return "".join([random.choice([i.upper(),i.lower()]) for i in n])
+    if style == "extend":
+        return word_extend(n)
     if style == "one-line":
         res = ""
         for i in list(n):
@@ -27,6 +29,11 @@ def GetResult(n, style):
 def GetWordCount(n):
     return len(n.split())
 
+def word_extend(s):
+	words = s.split()
+	for i in range(len(words)):
+		words[i] = "".join(words[i][:-1]) + words[i][-1]*random.randint(2,10)
+	return " ".join(words)
 
 def GetCharCount(n):
     return str(len(n.replace(" ", "")))+"/" + str(len(n))
