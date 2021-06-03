@@ -1,3 +1,4 @@
+import random
 def GetResult(n, style):
     if style == "upper":
         return n.upper()
@@ -5,6 +6,8 @@ def GetResult(n, style):
         return n.lower()
     if style == "title":
         return n.title()
+    if style == "weird":
+        return "".join([random.choice([i.upper(),i.lower()]) for i in n])
     if style == "one-line":
         res = ""
         for i in list(n):
