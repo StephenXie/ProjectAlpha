@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.views import View
 from formatter.forms import FormatterForm
-from formatter.script import GetResult, GetWordCount, GetCharCount
+from formatter.scripts import GetResult, GetWordCount, GetCharCount
 
 
 def FormatterView(request):

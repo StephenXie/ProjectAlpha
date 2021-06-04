@@ -6,6 +6,8 @@ def getGPA_w(score_arr, weight_arr, credit_arr):
         temp = getWeighted(temp, weight_arr[i])
         res += temp*float(credit_arr[i])
         credit += float(credit_arr[i])
+    # print(score_arr,weight_arr,credit_arr)
+    # print(res/credit)
     return res/credit
 
 
@@ -16,6 +18,8 @@ def getGPA_u(score_arr, credit_arr):
         temp = scoreToVal(score_arr[i])
         res += temp*float(credit_arr[i])
         credit += float(credit_arr[i])
+    # print(score_arr,credit_arr)
+    # print(res/credit)
     return res/credit
 
 
@@ -23,6 +27,9 @@ def getMaxGPA(weight_arr):
     res = 0
     for i in range(len(weight_arr)):
         res += getWeighted(4, weight_arr[i])
+    # print("Max")
+    # print(weight_arr)
+    # print(res/len(weight_arr))
     return res/len(weight_arr)
 
 
