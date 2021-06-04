@@ -34,8 +34,8 @@ def GetWordCount(n):
 
 def word_extend(s):
     words = s.split()
-    for i in range(len(words)):
-        words[i] = "".join(words[i][:-1]) + words[i][-1]*random.randint(2, 10)
+    for i, n in enumerate(words):
+        words[i] = "".join(n[:-1]) + n[-1]*random.randint(2, 10)
     return " ".join(words)
 
 
