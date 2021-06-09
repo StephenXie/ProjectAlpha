@@ -20,6 +20,7 @@ from formatter.views import FormatterView
 from cryptic.views import CrypticView,CrypticPost
 from GPAcal.views import GPAcal
 from PasteX.views import PasteXView
+from linky.views import LinkyView
 from django.conf import settings
 from django.views.static import serve
 from django.conf.urls import url
@@ -36,6 +37,8 @@ urlpatterns = [
     path('deleteTodo/<int:todo_id>/', deleteTodo),
     path('pastex/',PasteXView),
     path('pastex/<str:my_id>/',PasteXView),
+    path('linky/',LinkyView),
+    path('linky/<str:my_id>/',LinkyView),
     url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), 
     url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
 

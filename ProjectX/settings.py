@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'zt!y%yiemha(heptb2q69jt)0n2j+7nuqry)2ef54(hnpgf532'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'sx-my-app.herokuapp.com', 'www.stephenxie.com','www.stephenx.live', 'www.stephenx.tech']
 
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'cryptic.apps.CrypticConfig',
     'GPAcal.apps.GpacalConfig',
     'PasteX.apps.PastexConfig',
+    'linky.apps.LinkyConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

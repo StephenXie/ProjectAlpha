@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Linky - Stephen X{% endblock %}
+{% block content %}
+<div class="w3-container text-white w3-center"
+    style="background-image: url(https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260); padding:128px 16px;">
+    <h1 class="w3-margin w3-jumbo text-white font-extrabold">Linky</h1>
+    <p class="w3-xlarge">Paste your URL here and shorten it</p>
+    <div class="container flex flex-col mx-auto max-w-full items-center justify-center">
+        {% if item_id %}
+        <div class="bg-white text-black border shadow font-bold text-lg rounded-lg mt-6 p-4">
+            URL:
+            <a class="text-blue-500 underline" href="/linky/{{item_id}}">{{ request.build_absolute_uri }}{{item_id}}</a>
+        </div>
+        {% endif %}
+        {% if item.content %}
+        <pre class="w-3/5"><code class="{{language}} text-left rounded-md">{{item.content}}</code></pre>
+        <script>hljs.highlightAll();</script>
+        {% else %}
+        <form action="/linky/" class="w-3/5 space-y-2" method="post" style="text-align:center;">{% csrf_token %}
+            <textarea class="w-full py-2 px-2 text-gray-700 border shadow rounded-lg focus:outline-none" value=""
+                type="text" name="content" rows="1"></textarea>
+            <button type="submit" value="submit"
+                class="max-x-xs py-2 px-3 bg-green-500 hover:bg-green-600 focus:ring-green-500 focus:ring-offset-green-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">Create
+                generate link</button>
+        </form>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
