@@ -6,15 +6,14 @@ from formatter.scripts import GetResult, GetWordCount, GetCharCount
 
 
 def FormatterView(request):
-    return render(request, 'formatter.html')
-
-
-def FormatterPost(request):
-    try:
-        content = request.POST.get('content', 0)
-        style = request.POST.get('style_type', "none")
-    except:
-        return HttpResponse("Integer Value Needed")
-    args = {"content": GetResult(content, style), "WordCount": GetWordCount(
-        content), "CharCount": GetCharCount(content)}
-    return render(request, 'formatter.html', args)
+    if request.method == "POST":
+        try:
+            content = request.POST.get('content', 0)
+            style = request.POST.get('style_type', "none")
+        except:
+            return HttpResponse("Integer Value Needed")
+        args = {"content": GetResult(content, style), "WordCount": GetWordCount(
+            content), "CharCount": GetCharCount(content)}
+        return render(request, 'formatter.html', args)
+    else:
+        return render(request, 'formatter.html')

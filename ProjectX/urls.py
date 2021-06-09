@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from todo.views import todoView, addTodo, deleteTodo
-from formatter.views import FormatterView,FormatterPost
+from formatter.views import FormatterView
 from cryptic.views import CrypticView,CrypticPost
 from GPAcal.views import GPAcal
 from PasteX.views import PasteXView
@@ -27,7 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('AppX.urls')),
     path('formatter/',FormatterView),
-    path('formatter/post',FormatterPost),
+    path('formatter/post',FormatterView),
     path('cryptic/',CrypticView),
     path('cryptic/post',CrypticPost),
     path('GPAcal/',GPAcal),

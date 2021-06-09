@@ -6,7 +6,7 @@
     <p class="w3-xlarge text-lg font-semibold">Word Count: {{WordCount}}</p>
     <p class="w3-xlarge">Character Count: {{CharCount}}</p>
 
-    <form action="/formatter/post" method="post" style="text-align:center;">
+    <form action="/formatter/" method="post" style="text-align:center;">
         {% csrf_token %}
         <div class="container px-4 m-auto">
             <label for="style_type" class="w3-xlarge inline">Text style</label>
