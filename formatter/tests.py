@@ -29,3 +29,6 @@ class FormatterTestCase(SimpleTestCase):
                 assert len(set(n[len(original[i]):])) == 1
                 assert n[len(original[i])] == original[i][-1]
         extend_case("hello world")
+
+    def test_reverse(self):
+        assert GetResult("Hello World", "reverse") == "dlroW olleH"

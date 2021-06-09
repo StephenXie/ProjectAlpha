@@ -12,6 +12,8 @@ def GetResult(n, style):
         return "".join([random.choice([i.upper(), i.lower()]) for i in n])
     if style == "extend":
         return word_extend(n)
+    if style == "reverse":
+        return n[::-1]
     if style == "one-line":
         res = ""
         for i in list(n):
