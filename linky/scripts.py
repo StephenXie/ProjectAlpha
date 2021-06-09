@@ -20,7 +20,7 @@ def get_custom_id(custom_id):
     existing_id = LinkyItem.objects.all().values_list('id')
     if custom_id in existing_id:
         return generate_id()
-    if predict([custom_id]):
+    if predict([custom_id])[0] == 1:
         return generate_id()
     return custom_id
     
