@@ -17,11 +17,18 @@
         <script>hljs.highlightAll();</script>
         {% else %}
         <form action="/linky/" class="w-3/5 space-y-2" method="post" style="text-align:center;">{% csrf_token %}
+            
+            <div class="flex relative w-1/2 mx-auto">
+                <span class="rounded-l-md inline-flex  items-center px-5 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-md">
+                    {{ request.build_absolute_uri }}
+                </span>
+                <input type="text" class=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-1/2 py-2 px-2 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" name="url" placeholder="Your custom link"/>
+            </div>
             <textarea class="w-full py-2 px-2 text-gray-700 border shadow rounded-lg focus:outline-none" value=""
                 type="text" name="content" rows="1"></textarea>
             <button type="submit" value="submit"
-                class="max-x-xs py-2 px-3 bg-green-500 hover:bg-green-600 focus:ring-green-500 focus:ring-offset-green-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">Create
-                generate link</button>
+                class="max-x-xs py-2 px-3 bg-green-500 hover:bg-green-600 focus:ring-green-500 focus:ring-offset-green-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                Generate link</button>
         </form>
         {% endif %}
     </div>
