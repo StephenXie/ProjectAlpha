@@ -35,6 +35,7 @@ urlpatterns = [
     path('addTodo/',addTodo),
     path('deleteTodo/<int:todo_id>/', deleteTodo),
     path('pastex/',PasteXView),
+    path('pastex/<str:my_id>/',PasteXView),
     url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), 
     url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
 
