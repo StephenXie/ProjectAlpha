@@ -7,7 +7,7 @@ from django.core.exceptions import ObjectDoesNotExist
 
 
 # Create your views here.
-def LinkyView(request,my_id=None):
+def LinkyView(request, my_id=None):
     if my_id:  # Retrieve
         try:
             item = LinkyItem.objects.get(pk=my_id)

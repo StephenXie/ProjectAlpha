@@ -7,7 +7,7 @@ from django.core.exceptions import ObjectDoesNotExist
 
 
 # Create your views here.
-def PasteXView(request,my_id=None):
+def PasteXView(request, my_id=None):
     if my_id:  # Retrieve
         try:
             item = PasteXItem.objects.get(pk=my_id)
