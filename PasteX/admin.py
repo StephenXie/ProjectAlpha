@@ -3,7 +3,7 @@ from .models import PasteXItem
 
 
 # Register your models here.
-class PastexAdmin(admin.ModelAdmin):
-    list_display = ("content", "id", "language")
+class PasteXAdmin(admin.ModelAdmin):
+    list_display = ("id", "content", "language")
 
-admin.site.register(PasteXItem, PastexAdmin)
+admin.site.register(PasteXItem, PasteXAdmin)
