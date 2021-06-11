@@ -21,7 +21,7 @@ To run, enter
 python manage.py runserver
 ```
 ## File structure
-- Todo, Formatter, Cryptic, GPAcal, PasteX - apps
+- Todo, Formatter, Cryptic, GPAcal, PasteX, Linky - apps
   - Views - the main thing handling the the get and post requests
     - Can pass arguments to the html  
   - Scripts - what you do with the inputs
