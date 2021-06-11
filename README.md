@@ -38,6 +38,8 @@ python manage.py runserver
 - add and delete class button
   - implemented using JS and JQuery
 - input fields: class name(optional), grade, credit, weight
+- using AJAX to update GPA when the form is changed without refreshing the page
+  - using jQuery
 - all button and input fields are powered with some *nice* CSS
   - currently using Tailwind CSS
   - might switch to bootstrap later
