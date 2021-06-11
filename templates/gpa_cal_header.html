@@ -1,0 +1,28 @@
+<div id="GPA">
+    <div class="text-center" id="GPA_text">
+        <p class="w3-xlarge text-blue-500 font-bold xl:inline">Your Weighted GPA: {{GPA_w}}</p><br>
+        <p class="w3-xlarge text-blue-400 font-bold xl:inline">Your Unweighted GPA: {{GPA_u}}</p>
+    </div>
+    <div id="grade-bar" class="bg-opacity-0 rounded-lg block p-4 m-auto">
+        <span class="m-2">Unweighted percentage (<span id="unweighted">{{GPA_u}}</span>/4.0): </span>
+        <div class="m-2 flex text-center">
+            <div class="inline-block  flex-1 mr-1 text-right">0.0</div>
+            <div class="inline-block h-4 w-72 shadow bg-gray-400 rounded-full" style="width: {{pct_u}} flex:5;">
+                <div class="h-full text-center text-xs text-white bg-blue-500 rounded-full" style="width: {{pct_u}};">
+                    {{pct_u}}
+                </div>
+            </div>
+            <div class="inline-block  flex-1 ml-1 text-left ">4.0</div>
+        </div>
+        <span class="m-2">Weighted percentage ({{GPA_w}}/{{max_GPA}}): </span>
+        <div class="m-2 flex text-center">
+            <div class="inline-block flex-1 mr-1 text-right">0.0</div>
+            <div class="inline-block h-4 w-72 shadow bg-gray-400 rounded-full" style="width: {{pct_w}} flex:5;">
+                <div class="h-full text-center text-xs text-white bg-red-500 rounded-full" style="width: {{pct_w}};">
+                    {{pct_w}}
+                </div>
+            </div>
+            <div class="inline-block flex-1 ml-1 text-left">{{max_GPA}}</div>
+        </div>
+    </div>
+    </div>

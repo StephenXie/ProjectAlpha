@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
 <!-- Header -->
 <header class="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
   <div class="relative z-30 p-5 text-center text-2xl text-white rounded-xl">
@@ -16,7 +15,7 @@
     style="z-index: -1;"
   >
     <source
-      src="..\static\admin\img\Pexels Videos 1409899.mp4"
+      src={{video}}
       type="video/mp4"
     />
     Your browser does not support the video tag.
@@ -57,7 +56,7 @@
 </div>
 
 <div class="w3-container bg-black w3-center bg-opacity-80 w3-padding-64">
-    <h1 class="w3-margin text-white w3-xlarge">Quote of the day: Live Laugh Love</h1>
+    <h1 class="w3-margin text-white w3-xlarge">Quote of the day: <br> {{quote}}</h1>
 </div>
 
 {% endblock %}

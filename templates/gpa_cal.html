@@ -8,12 +8,13 @@
 </header>
 
 <div class="w3-container w3-center bg-yellow-100" style="padding:64px 16px">
+    <div id="GPA">
     <div class="text-center" id="GPA_text">
         <p class="w3-xlarge text-blue-500 font-bold xl:inline">Your Weighted GPA: {{GPA_w}}</p><br>
         <p class="w3-xlarge text-blue-400 font-bold xl:inline">Your Unweighted GPA: {{GPA_u}}</p>
     </div>
     <div id="grade-bar" class="bg-opacity-0 rounded-lg block p-4 m-auto">
-        <span class="m-2">Unweighted percentage ({{GPA_u}}/4.0): </span>
+        <span class="m-2">Unweighted percentage (<span id="unweighted">{{GPA_u}}</span>/4.0): </span>
         <div class="m-2 flex text-center">
             <div class="inline-block  flex-1 mr-1 text-right">0.0</div>
             <div class="inline-block h-4 w-72 shadow bg-gray-400 rounded-full" style="width: {{pct_u}} flex:5;">
@@ -33,6 +34,7 @@
             </div>
             <div class="inline-block flex-1 ml-1 text-left">{{max_GPA}}</div>
         </div>
+    </div>
     </div>
     <div class="flex justify-center">
         <div style="width:500px;" class="flex justify-start">
@@ -117,6 +119,27 @@
                         var myClass = document.getElementById(id);
                         myClass.remove();
                     }
+                </script>
+                <script>
+                    $("#form").submit(function(e){
+                    // prevent from normal form behaviour
+                        e.preventDefault();
+                        // serialize the form data  
+                        var serializedData = $(this).serialize();
+                        $.ajax({
+                            type : 'POST',
+                            url :  "",
+                            data : serializedData,
+                            success : function(response){
+                            //reset the form after successful submit
+                                console.log("yeet")
+                                $("#GPA").html(response);
+                            },
+                            error : function(response){
+                                console.log(response)
+                            }
+                        });
+                    });
                 </script>
             </div>
         </div>

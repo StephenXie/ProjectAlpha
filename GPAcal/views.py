@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
+from django.template.loader import render_to_string
 from django.views import View
 from GPAcal.scripts import getGPA_w, getGPA_u, getMaxGPA
 # Create your views here.
@@ -7,7 +8,7 @@ from GPAcal.scripts import getGPA_w, getGPA_u, getMaxGPA
 
 def GPAcal(request):
     GPA_u = GPA_w = max_GPA = 4.0
-    if request.method == "POST":
+    if request.is_ajax() and request.method == "POST":
         classes = request.POST.getlist("class_name")
         grades = request.POST.getlist("grade")
         class_type = request.POST.getlist("class_type")
@@ -23,4 +24,8 @@ def GPAcal(request):
     GPA_u = round(GPA_u, 2)
     args = {"GPA_w": GPA_w, "GPA_u": GPA_u, "max_GPA": round(
         max_GPA, 2), "pct_u": str(pct_u)+"%", "pct_w": str(pct_w)+"%"}
+    if request.is_ajax() and request.method == "POST":
+        html = render_to_string('gpa_cal_header.html', {"GPA_w": GPA_w, "GPA_u": GPA_u, "max_GPA": round(
+        max_GPA, 2), "pct_u": str(pct_u)+"%", "pct_w": str(pct_w)+"%"})
+        return HttpResponse(html)
     return render(request, 'gpa_cal.html', args)
