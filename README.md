@@ -33,6 +33,7 @@ python manage.py runserver
   - base.html - the template html file so that we don't have to copy and paste everytime we make changes   
 - AppX - Home page
 - ProjectX - Settings
+  - url.py - url of pages
 - Static - Assets(e.g. images, css, js)
 ## GPA Calculator
 - add and delete class button
