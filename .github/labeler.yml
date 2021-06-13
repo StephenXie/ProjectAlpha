@@ -1,5 +1,9 @@
-# Add 'frontend` label to any change to *.js files as long as the `main.js` hasn't changed
+# Add 'frontend` label to any change to *.html files
 frontend:
 - templates/*.html
+# Add 'backend` label to any change to *.py files
 backend:
 - '**/*.py'
+# Add 'settings` label to any change to settings.py files
+backend:
+- 'ProjectX/settings.py'
