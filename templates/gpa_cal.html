@@ -111,18 +111,41 @@
                             //newDiv.style.background = "#000";
                             $('#classes').append(newDiv);
                             $(`#class-${counter}`).slideUp( 1 ).delay(100).fadeIn(300);
-                            counter += 1
+                            counter += 1;
+                            $('#form').submit();
                         });
                     });
                 </script>
                 <script>
                     function deleteClass(id) {
+                        /* jQuery(`#${id}`).fadeOut(300, function() { var myClass = document.getElementById(id);
+                        myClass.remove(); }); */
                         var myClass = document.getElementById(id);
                         myClass.remove();
+                        jQuery('#form').submit();
                     }
                 </script>
                 <script>
                     $("#form").change(function(e){
+                    // prevent from normal form behaviour
+                        e.preventDefault();
+                        // serialize the form data  
+                        var serializedData = $(this).serialize();
+                        $.ajax({
+                            type : 'POST',
+                            url :  "",
+                            data : serializedData,
+                            success : function(response){
+                            //reset the form after successful submit
+                                console.log("yeet")
+                                $("#GPA").html(response);
+                            },
+                            error : function(response){
+                                console.log(response)
+                            }
+                        });
+                    });
+                    $("#form").submit(function(e){
                     // prevent from normal form behaviour
                         e.preventDefault();
                         // serialize the form data  
