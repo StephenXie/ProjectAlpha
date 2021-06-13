@@ -120,8 +120,9 @@
                     function deleteClass(id) {
                         /* jQuery(`#${id}`).fadeOut(300, function() { var myClass = document.getElementById(id);
                         myClass.remove(); }); */
-                        var myClass = document.getElementById(id);
-                        myClass.remove();
+                        {% comment %} var myClass = document.getElementById(id);
+                        myClass.remove(); {% endcomment %}
+                        jQuery(`#${id}`).remove();
                         jQuery('#form').submit();
                     }
                 </script>
