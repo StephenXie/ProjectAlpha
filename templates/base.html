@@ -57,7 +57,7 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N57ZLMB" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <nav id="navbar" class="bg-white md:bg-opacity-0 fixed w-full dark:bg-gray-800 " style="z-index: 9999;">
+  <nav id="navbar" class="bg-white md:bg-opacity-0 fixed w-full dark:bg-gray-800 md:shadow-none" style="z-index: 9999;">
     <div class="max-w-full mx-auto px-8">
       <div class="flex items-center justify-between h-16">
         <div class=" flex items-center">
@@ -179,12 +179,14 @@
     function navbarColor() {
       if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
         document.getElementById("navbar").className = document.getElementById("navbar").className.replace("md:bg-opacity-0", "md:bg-opacity-100");
+        document.getElementById("navbar").className = document.getElementById("navbar").className.replace("md:shadow-none", "md:shadow-lg");
         var childDivs = document.getElementById('navbar').getElementsByTagName('a');
         for (i = 0; i < childDivs.length; i++) {
           childDivs[i].className = childDivs[i].className.replace("md:text-white", "md:text-gray-800");
         }
       } else {
         document.getElementById("navbar").className = document.getElementById("navbar").className.replace("md:bg-opacity-100", "md:bg-opacity-0");
+        document.getElementById("navbar").className = document.getElementById("navbar").className.replace("md:shadow-lg", "md:shadow-none");
         var childDivs = document.getElementById('navbar').getElementsByTagName('a');
         for (i = 0; i < childDivs.length; i++) {
           childDivs[i].className = childDivs[i].className.replace("md:text-gray-800", "md:text-white");
