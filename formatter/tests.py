@@ -17,8 +17,11 @@ class FormatterTestCase(SimpleTestCase):
     def test_titlecase(self):
         assert GetResult("Hello World", "title") == "Hello World"
 
-    def test_weirdcase(self):
-        assert GetResult("Hello World", "weird").lower() == "hello world"
+    def test_randomcase(self):
+        assert GetResult("Hello World", "random").lower() == "hello world"
+
+    def test_alternatecase(self):
+        assert GetResult("Hello World", "alternate") == "hElLo wOrLd"
 
     def test_extend(self):
         def extend_case(case):
