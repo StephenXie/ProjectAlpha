@@ -8,8 +8,10 @@ def GetResult(n, style):
         return n.lower()
     if style == "title":
         return n.title()
-    if style == "weird":
+    if style == "random":
         return "".join([random.choice([i.upper(), i.lower()]) for i in n])
+    if style == "alternate":
+        return "".join([[k.lower(), k.upper()][i % 2] for i, k in enumerate(n)])
     if style == "extend":
         return word_extend(n)
     if style == "reverse":
