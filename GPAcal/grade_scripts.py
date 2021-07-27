@@ -1,14 +1,16 @@
-def getFinal(G,w,C):
+def getFinal(G, w, C):
     """
     F = Final exam grade
     G = Grade you want for the class
     w = Weight of the final exam, divided by 100 (put weight in decimal form vs. percentage form)
     C = Your current grade
     """
+    w /= 100
     F = (G-((1-w)*C))/w
     return F
 
-def getScore(F,w,C):
+
+def getScore(F, w, C):
     """
     F = Final exam grade
     G = Grade you will get
@@ -16,5 +18,6 @@ def getScore(F,w,C):
     C = Your current grade
     Final Grade = Initial Grade*(1-W) + S*W
     """
+    w /= 100
     G = C*(1-w) + F*w
     return G
