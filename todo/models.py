@@ -3,5 +3,6 @@ from datetime import datetime
 import pytz
 # Create your models here.
 class TodoItem(models.Model):
+    id = models.AutoField(primary_key=True)
     content = models.TextField()
     date = models.DateTimeField(default=datetime.utcnow)
