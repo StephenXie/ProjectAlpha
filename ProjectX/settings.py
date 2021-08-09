@@ -32,14 +32,16 @@ ALLOWED_HOSTS = ['127.0.0.1', 'sx-my-app.herokuapp.com', 'www.stephenxie.com','w
 
 INSTALLED_APPS = [
     #'GPAcal.apps.GpacalConfig',
-    'todo.apps.TodoConfig',
-    'AppX.apps.AppxConfig',
-    'formatter.apps.FormatterConfig',
-    'cryptic.apps.CrypticConfig',
-    'GPAcal.apps.GpacalConfig',
-    'PasteX.apps.PastexConfig',
-    'linky.apps.LinkyConfig',
+    'todo',
+    'AppX',
+    'formatter',
+    'cryptic',
+    'GPAcal',
+    'PasteX',
+    'linky',
     'django.contrib.admin',
+    'corsheaders',
+    'rest_framework',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -48,6 +50,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -60,7 +63,9 @@ MIDDLEWARE = [
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT = False
 ROOT_URLCONF = 'ProjectX.urls'
-
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+]
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
