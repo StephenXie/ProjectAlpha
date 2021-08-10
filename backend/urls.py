@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from todo.views import todoView, addTodo, deleteTodo
+from rest_framework import routers  
+# from todo.views import todoView, addTodo, deleteTodo
+from todo import view_test
 from formatter.views import FormatterView
 from cryptic.views import CrypticView, CrypticPost
 from GPAcal.views import GPAcal
@@ -24,17 +26,22 @@ from linky.views import LinkyView
 from django.conf import settings
 from django.views.static import serve
 from django.conf.urls import url
+
+router = routers.DefaultRouter()                   
+router.register(r'todos', view_test.TodoView, 'todo')  
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/', include(router.urls),), 
     path('', include('AppX.urls')),
     path('formatter/', FormatterView),
     path('formatter/post', FormatterView),
     path('cryptic/', CrypticView),
     path('cryptic/post', CrypticPost),
     path('GPAcal/', GPAcal),
-    path('todo/', todoView),
-    path('addTodo/', addTodo),
-    path('deleteTodo/<int:todo_id>/', deleteTodo),
+    # path('todo/', todoView),
+    # path('addTodo/', addTodo),
+    # path('deleteTodo/<int:todo_id>/', deleteTodo),
     path('pastex/', PasteXView),
     path('pastex/<str:my_id>/', PasteXView),
     path('linky/', LinkyView),

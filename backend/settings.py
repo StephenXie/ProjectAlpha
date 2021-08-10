@@ -25,7 +25,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', "g%u_m4bxeoh%v&zg6neup_67m6mz-3@k=r%dxih%7d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'sx-my-app.herokuapp.com', 'www.stephenxie.com','www.stephenx.live', 'www.stephenx.tech']
+ALLOWED_HOSTS = ['localhost','127.0.0.1', 'sx-my-app.herokuapp.com', 'www.stephenxie.com','www.stephenx.live', 'www.stephenx.tech']
 
 
 # Application definition
@@ -62,10 +62,12 @@ MIDDLEWARE = [
 ]
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT = False
-ROOT_URLCONF = 'ProjectX.urls'
+ROOT_URLCONF = 'backend.urls'
+
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
 ]
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -82,7 +84,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'ProjectX.wsgi.application'
+WSGI_APPLICATION = 'backend.wsgi.application'
 
 
 # Database
