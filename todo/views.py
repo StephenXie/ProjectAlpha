@@ -35,7 +35,7 @@ def todoView(request):
 def addTodo(request):
     if not request.user.is_authenticated:
         return render(request, '404.html')
-    new_item = TodoItem(content=request.POST['text'])
+    new_item = TodoItem(text=request.POST['text'])
     new_item.save()
     return HttpResponseRedirect('/todo/')
 
