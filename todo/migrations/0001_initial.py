@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             name='TodoItem',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('content', models.TextField()),
+                ('text', models.TextField()),
             ],
         ),
     ]
