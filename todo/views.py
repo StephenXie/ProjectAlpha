@@ -26,7 +26,7 @@ def todoView(request):
     all_todo_items = TodoItem.objects.all()
     items = []
     for i in all_todo_items:
-        items.append(item(i.date, i.content, i.id))
+        items.append(item(i.date, i.text, i.id))
     items.sort(key=lambda x: x.id)
     return render(request, 'todo.html',
                   {'all_items': all_todo_items, 'items': items, 'auth': request.user.is_authenticated})
@@ -35,7 +35,7 @@ def todoView(request):
 def addTodo(request):
     if not request.user.is_authenticated:
         return render(request, '404.html')
-    new_item = TodoItem(content=request.POST['content'])
+    new_item = TodoItem(text=request.POST['text'])
     new_item.save()
     return HttpResponseRedirect('/todo/')
 

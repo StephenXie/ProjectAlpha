@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Navbar from './components/Navbar'
 import Header from './components/Header'
 import Tasks from './components/Tasks'
 import AddTask from './components/AddTask'
@@ -18,10 +19,21 @@ function Test() {
       const data = await res.json()
       return data
     }
-    const addTask = (task) =>{
-      const id = Math.floor(Math.random() * 10000) + 1
-      const newTask = {id, ...task}
-      setTasks([...tasks, newTask])
+    const addTask =  async (task) =>{
+      const res = await fetch('http://127.0.0.1:8000/api/todos/',{
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json',
+        },
+        body: JSON.stringify(task),
+      })
+
+      const data = await res.json()
+
+      setTasks([...tasks, data])
+      // const id = Math.floor(Math.random() * 10000) + 1
+      // const newTask = {id, ...task}
+      // setTasks([...tasks, newTask])
     }
     const deleteTask = async (id) =>{
       await fetch(`http://127.0.0.1:8000/api/todos/${id}`,{
@@ -36,6 +48,7 @@ function Test() {
     }
     return (
         <div className='container'>
+            <Navbar/>
             <Header title='Todo List' onAdd={() => setShowAddTask(!showAddTask)} showAdd={showAddTask}/>
             {showAddTask && <AddTask onAdd={addTask}/>}
             {tasks.length > 0 ? (<Tasks tasks ={tasks} onDelete={deleteTask} onToggle={toggleReminder}/>) : ("No Tasks To Show")}

@@ -2,10 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Todo from './Todo';
+
 import reportWebVitals from './reportWebVitals';
+import { Navbar } from 'reactstrap';
 
 ReactDOM.render(
   <React.StrictMode>
+    
     <Todo />
   </React.StrictMode>,
   document.getElementById('root')

@@ -10,6 +10,8 @@ const AddTask = ({ onAdd }) => {
             alert('Please add a task')
             return
         }
+        const date = new Date(date)
+        console.log(date.format("DD-MM-YYYY h:mm:ss"))
         onAdd({text,date,reminder})
         setText('')
         setDate('')

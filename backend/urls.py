@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers  
-# from todo.views import todoView, addTodo, deleteTodo
+from todo.views import todoView, addTodo, deleteTodo
 from todo import view_test
 from formatter.views import FormatterView
 from cryptic.views import CrypticView, CrypticPost
@@ -39,9 +39,9 @@ urlpatterns = [
     path('cryptic/', CrypticView),
     path('cryptic/post', CrypticPost),
     path('GPAcal/', GPAcal),
-    # path('todo/', todoView),
-    # path('addTodo/', addTodo),
-    # path('deleteTodo/<int:todo_id>/', deleteTodo),
+    path('todo/', todoView),
+    path('addTodo/', addTodo),
+    path('deleteTodo/<int:todo_id>/', deleteTodo),
     path('pastex/', PasteXView),
     path('pastex/<str:my_id>/', PasteXView),
     path('linky/', LinkyView),

@@ -1,27 +1,30 @@
   
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter%3Awght%40400%3B500%3B600%3B700%3B800&display=swap&ver=5.8');
 
-* {
+/* * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
+} */
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  background-image: url("https://images.pexels.com/photos/158658/bokeh-blur-blue-white-158658.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size:     cover; 
 }
 
 .container {
-  max-width: 500px;
-  margin: 30px auto;
+  position: relative;
   overflow: auto;
-  min-height: 300px;
-  border: 1px solid steelblue;
-  padding: 30px;
+  min-height: 500px;
+  margin: 0 auto;
   border-radius: 5px;
 }
 
 .header {
+  position: relative;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,12 +58,12 @@ body {
   width: 100%;
 }
 
-.task {
+/* .task {
   background: #f4f4f4;
   margin: 5px;
   padding: 10px 20px;
   cursor: pointer;
-}
+} */
 
 .task.reminder {
   border-left: 5px solid green;
