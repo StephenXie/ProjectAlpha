@@ -7,11 +7,12 @@
     <h1 class="w3-margin w3-jumbo leading-tight font-extrabold font-sans">Stephen Xie</h1>
     <button onclick="location.href='https://stephenxie.me/'" class="py-4 px-6 m-4 bg-yellow-300 hover:bg-yellow-500 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-2/5 transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full" type="button">About Me</button>
   </div>
+  <div id="particles-js" class="absolute w-full" style="z-index: 0;"></div>
   <video
     autoplay
     loop
     muted
-    class="fixed z-10 h-auto w-full min-w-full min-h-full max-w-none"
+    class="fixed h-auto w-full min-w-full min-h-full max-w-none"
     style="z-index: -1; object-fit: fill;"
   >
     <source
@@ -22,6 +23,13 @@
   </video>
   
 </header>
+<script>
+particlesJS.load('particles-js', '../static/admin/particles.json', function() {
+    console.log('callback - particles.js config loaded');
+});
+  
+</script>
+
 
 <!-- First Grid -->
 <div class="w3-row-padding bg-white bg-opacity-90 w3-padding-64 w3-container">
