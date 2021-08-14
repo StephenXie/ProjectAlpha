@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
+import Particles from 'react-particles-js';
 import Navbar from './components/Navbar'
 import Header from './components/Header'
+import Footer from './components/Footer'
 import Tasks from './components/Tasks'
 import AddTask from './components/AddTask'
 function Test() {
@@ -47,11 +49,42 @@ function Test() {
         setTasks(tasks.map((task) => task.id === id ? {...task, reminder: !task.reminder} : task))
     }
     return (
+      
         <div className='container'>
+            
             <Navbar/>
+            <Particles className="absolute z-0"
+  params={{
+    "particles": {
+      color: {
+        value: "#89CFF0"
+      },
+      line_linked: {
+        color: {
+          value: "#0047AB"
+        }
+      },
+      number: {
+        value: 100
+      },
+      size: {
+        value: 3
+      }
+    },
+    interactivity: {
+      "events": {
+          "onhover": {
+              "enable": true,
+              "mode": "grab"
+          }
+      }
+  }
+  }}
+/>
             <Header title='Todo List' onAdd={() => setShowAddTask(!showAddTask)} showAdd={showAddTask}/>
             {showAddTask && <AddTask onAdd={addTask}/>}
             {tasks.length > 0 ? (<Tasks tasks ={tasks} onDelete={deleteTask} onToggle={toggleReminder}/>) : ("No Tasks To Show")}
+            <Footer/>
         </div>
         
     )

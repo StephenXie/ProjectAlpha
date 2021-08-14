@@ -10,10 +10,16 @@
 body {
   font-family: 'Inter', sans-serif;
   font-weight: bold;
-  background-image: url("https://images.pexels.com/photos/158658/bokeh-blur-blue-white-158658.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  /* background-image: url("https://images.pexels.com/photos/158658/bokeh-blur-blue-white-158658.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); */
   background-size:     cover; 
 }
 
+
+.on-top{
+  position:relative;
+  z-index:9999;
+  overflow-y: hidden;
+}
 .container {
   position: relative;
   overflow: auto;
