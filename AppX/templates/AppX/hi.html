@@ -5,7 +5,7 @@
 <header class="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
   <div class="relative z-30 p-5 text-center text-2xl text-white rounded-xl">
     <h1 class="w3-margin w3-jumbo leading-tight font-extrabold font-sans">Stephen Xie</h1>
-    <button onclick="location.href='https://stephenxie.me/'" class="py-4 px-6 m-4 bg-yellow-300 hover:bg-yellow-500 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-2/5 transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full" type="button">About Me</button>
+    <button id="about-me-button" onclick="location.href='https://stephenxie.me/'" class="py-4 px-6 m-4 bg-yellow-300 hover:bg-yellow-500 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-2/5 transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full" type="button">About Me</button>
   </div>
   <div id="particles-js" class="absolute w-full" style="z-index: 0;"></div>
   <video
@@ -14,8 +14,9 @@
     muted
     class="fixed h-auto w-full min-w-full min-h-full max-w-none"
     style="z-index: -1; object-fit: fill;"
+    id="video-container"
   >
-    <source
+    <source id="video"
       src="..\static\admin\img\Pexels Videos 1720220.mp4"
       type="video/mp4"
     />
@@ -29,7 +30,65 @@ particlesJS.load('particles-js', '../static/admin/particles.json', function() {
 });
   
 </script>
+<style>
 
+.toggle-path {
+    transition: background 0.3s ease-in-out;
+}
+.toggle-circle {
+    top: 0.2rem;
+    left: 0.25rem;
+    transition: all 0.3s ease-in-out;
+}
+input:checked ~ .toggle-circle {
+    transform: translateX(100%);
+}
+input:checked ~ .toggle-path {
+    background-color:#81E6D9;
+}
+</style>
+<script type="text/javascript">
+    function changeImage() {
+      var video = document.getElementById("video-container");
+      var source = document.getElementById("video");
+      var aboutMe = document.getElementById("about-me-button");
+      video.pause()
+      if(document.getElementById("toogleButton").checked){
+        source.setAttribute('src', '..\\static\\admin\\img\\background.mp4');
+        aboutMe.classList.add("bg-green-300");
+        aboutMe.classList.add("hover:bg-green-500");
+        aboutMe.classList.remove("bg-yellow-300");
+        aboutMe.classList.remove("hover:bg-yellow-500"); 
+      } else {
+        source.setAttribute('src', '..\\static\\admin\\img\\Pexels Videos 1720220.mp4');
+        aboutMe.classList.add("bg-yellow-300");
+        aboutMe.classList.add("hover:bg-yellow-500");
+        aboutMe.classList.remove("bg-green-300");
+        aboutMe.classList.remove("hover:bg-green-500"); 
+      }
+      video.load();
+      video.play();
+      
+    }
+</script>
+<div class="flex justify-center">
+     <label for="toogleButton" class="flex cursor-pointer">
+        <div class="px-2 text-white">Tech mode</div>
+    <!-- toggle -->
+    <div class="relative">
+      <input id="toogleButton" type="checkbox" class="hidden" onclick="changeImage();"/>
+      <!-- path -->
+      <div
+        class="toggle-path bg-gray-200 w-9 h-5 rounded-full shadow-inner"
+      ></div>
+      <!-- crcle -->
+      <div
+        class="toggle-circle absolute w-3.5 h-3.5 bg-white rounded-full shadow inset-y-0 left-0"
+      ></div>
+    </div>
+  </label>
+
+</div>
 
 <!-- First Grid -->
 <div class="w3-row-padding bg-white bg-opacity-90 w3-padding-64 w3-container">

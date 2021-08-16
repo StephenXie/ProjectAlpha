@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
 {% block title %}Todo - Stephen X{% endblock %}
 {% block content %}
-<header class="w3-container text-white bg-cover w3-center" style="background-image: url(https://images.pexels.com/photos/255419/pexels-photo-255419.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=600&w=960); padding:128px 16px;">
+<header class="w3-container text-white bg-cover w3-center" style="background-image: url(https://images.pexels.com/photos/7103/writing-notes-idea-conference.jpg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260); padding:128px 16px;">
   <p class="text-center text-7xl font-sans text-white font-extrabold">Todo List</p>
 </header>
-<div class="container flex flex-col mx-2 md:mx-auto max-w-full md:w-3/5 w-11/12 items-center justify-center">
+<div class="py-10">
+<div class="container flex flex-col mx-2 md:mx-auto max-w-full md:w-3/5 w-11/12 items-center justify-center" >
   <ul class="w-full flex flex-col">
     {% for todo_item in items %}
     <li class="border-gray-400 flex flex-row mb-2">
@@ -20,15 +21,14 @@
         </div>
         <form action="/deleteTodo/{{todo_item.id}}/" style="display:inline;" method="post">{% csrf_token %}
           {% if auth %}
-          <button type="submit" value="Delete"
-            class="py-2 px-4 bg-gradient-to-r from-red-400 to-blue-500 transform hover:scale-110 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg">
-            Delete
-          </button>
+          <button type="submit" value="Delete"> 
+          <i class="fa fa-trash text-red-500 fa-2x">
+          </i>
+          <button>
           {% else %}
-          <button type="button" value="Unauth"
-            class="py-2 px-4 bg-gradient-to-r from-red-400 to-blue-500 transform hover:scale-110 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
-            onclick="toggleModal('modal-id')">
-            Delete
+          <button type="button" value="Unauth" onclick="toggleModal('modal-id')">
+            <i class="fa fa-trash text-red-500 fa-2x">
+            </i>
           </button>
           {% endif %}
         </form>
@@ -82,6 +82,7 @@
       </div>
     </div>
   </div>
+</div>
 </div>
 <div class="hidden opacity-30 fixed inset-0 z-40 bg-black" id="modal-id-backdrop"></div>
 <script type="text/javascript">
