@@ -1,10 +1,11 @@
 import { Fragment } from 'react'
+import { BrowserRouter as Router, Link, withRouter } from "react-router-dom";
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 
 const navbar_list = [
-  { name: 'Home', href: '..',  },
-  { name: 'Todo', href: '..',  },
+  { name: 'Home', href: '/',  },
+  { name: 'Todo', href: '/Todo',  },
   { name: 'Formatter', href: '..',  },
   { name: 'Cryptic', href: '..', },
   { name: 'GPAC', href: '..', },
@@ -16,7 +17,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Navbar({ current }) {
+function Navbar({ current }) {
   const navigation = navbar_list.map((item) => item["name"]==current ? {...item, current:true } : {...item, current:false })
   return (
     <Disclosure as="nav" className="bg-gray-800 bg-opacity-100">
@@ -51,9 +52,9 @@ export default function Navbar({ current }) {
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         className={classNames(
                           item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                           'px-3 py-2 rounded-md text-sm font-medium'
@@ -61,7 +62,7 @@ export default function Navbar({ current }) {
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -151,5 +152,8 @@ export default function Navbar({ current }) {
         </>
       )}
     </Disclosure>
+
   )
 }
+
+export default Navbar

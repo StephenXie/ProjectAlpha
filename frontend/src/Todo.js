@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, withRouter, Link } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -61,6 +62,7 @@ function Todo() {
         onAdd={() => setShowAddTask(!showAddTask)}
         showAdd={showAddTask}
       />
+      
       {showAddTask && <AddTask onAdd={addTask} />}
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
@@ -72,4 +74,4 @@ function Todo() {
   );
 }
 
-export default Todo;
+export default withRouter(Todo);
