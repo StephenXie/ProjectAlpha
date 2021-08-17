@@ -18,7 +18,7 @@ const AddTask = ({ onAdd }) => {
         setReminder(false)
     }
     return (
-        <form className='add-form bg-white bg-opacity-100 on-top' onSubmit={onSubmit}>
+        <form className='add-form bg-white bg-opacity-100 relative w-full' onSubmit={onSubmit}>
             <div className='form-control'>
                 <label> Task </label>
                 <input type='text' placeholder='Add Task' value = {text} onChange={(e) => setText(e.target.value)}/>

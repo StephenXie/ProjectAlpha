@@ -2,18 +2,22 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 
-const navigation = [
-  { name: 'Dashboard', href: '..', current: true },
-  { name: 'Team', href: '..', current: false },
-  { name: 'Projects', href: '..', current: false },
-  { name: 'Calendar', href: '..', current: false },
+const navbar_list = [
+  { name: 'Home', href: '..',  },
+  { name: 'Todo', href: '..',  },
+  { name: 'Formatter', href: '..',  },
+  { name: 'Cryptic', href: '..', },
+  { name: 'GPAC', href: '..', },
+  { name: 'PasteX', href: '..', },
+  { name: 'Linky', href: '..', },
 ]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function Navbar({ current }) {
+  const navigation = navbar_list.map((item) => item["name"]==current ? {...item, current:true } : {...item, current:false })
   return (
     <Disclosure as="nav" className="bg-gray-800 bg-opacity-100">
       {({ open }) => (
@@ -75,7 +79,7 @@ export default function Example() {
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        src="https://stephenxie.me/images/avatar_white%20-%20round.png"
                         alt=""
                       />
                     </Menu.Button>

@@ -4,14 +4,14 @@ import './index.css';
 import Todo from './Todo';
 
 import reportWebVitals from './reportWebVitals';
+import Particle from './components/Particle';
 
 ReactDOM.render(
   <React.StrictMode>
-    
     <Todo />
 
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

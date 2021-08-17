@@ -6,29 +6,32 @@
   margin: 0;
   padding: 0;
 } */
-
-body {
+html, body{
+  min-height: 100%;
+}
+#root, body {
   font-family: 'Inter', sans-serif;
   font-weight: bold;
-  /* background-image: url("https://images.pexels.com/photos/158658/bokeh-blur-blue-white-158658.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); */
-  background-size:     cover; 
-}
-
-
-.on-top{
-  position:relative;
-  z-index:9999;
-  overflow-y: hidden;
-}
-.container {
   position: relative;
+  
   overflow: auto;
-  min-height: 500px;
-  margin: 0 auto;
-  border-radius: 5px;
+  height:100vh;
+  /* background-image: url("https://images.pexels.com/photos/158658/bokeh-blur-blue-white-158658.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); */
 }
 
-.header {
+
+.neg-z-1{
+  z-index: -1;
+
+}
+.my-container {
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+  /* border-radius: 5px; */
+}
+
+header {
   position: relative;
   margin: 0 auto;
   display: flex;
