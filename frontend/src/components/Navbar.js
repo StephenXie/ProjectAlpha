@@ -6,11 +6,11 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 const navbar_list = [
   { name: 'Home', href: '/',  },
   { name: 'Todo', href: '/Todo',  },
-  { name: 'Formatter', href: '..',  },
-  { name: 'Cryptic', href: '..', },
-  { name: 'GPAC', href: '..', },
-  { name: 'PasteX', href: '..', },
-  { name: 'Linky', href: '..', },
+  { name: 'Formatter', href: '/Formatter',  },
+  { name: 'Cryptic', href: '/Cryptic', },
+  { name: 'GPAC', href: '/GPAC', },
+  { name: 'PasteX', href: '/PasteX', },
+  { name: 'Linky', href: '/Linky', },
 ]
 
 function classNames(...classes) {

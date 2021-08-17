@@ -8,6 +8,11 @@ import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
 import Todo from './Todo';
 import Home from './Home';
+import Formatter from './Formatter';
+import Cryptic from './Cryptic';
+import GPAC from './GPAC';
+import PasteX from './PasteX';
+import Linky from './Linky';
 import { Nav } from "reactstrap";
 
 const App = () => {
@@ -16,6 +21,11 @@ const App = () => {
             <Switch>
                 <Route exact path='/' component={Home} />
                 <Route path='/Todo' component={Todo} />
+                <Route path='/Formatter' component={Formatter} />
+                <Route path='/Cryptic' component={Cryptic} />
+                <Route path='/GPAC' component={GPAC} />
+                <Route path='/PasteX' component={PasteX} />
+                <Route path='/Linky' component={Linky} />
             </Switch>
         </Router>
     )
