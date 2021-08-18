@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const Button = ({text,color,onClick}) => {
     return (
-        <button onClick={onClick} className='btn' style={{ backgroundColor: color}}>{text}</button>
+        <button onClick={onClick} className='btn btn-primary' style={{ backgroundColor: color}}>{text}</button>
     )
 }
 
