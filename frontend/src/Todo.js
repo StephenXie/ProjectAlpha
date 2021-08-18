@@ -54,7 +54,7 @@ function Todo() {
     );
   };
   return (
-    <div className="my-container">
+    <div className="my-container flex-1">
       <Navbar current="Todo"/>
       <Particle />
       <Header
@@ -69,7 +69,6 @@ function Todo() {
       ) : (
         "No Tasks To Show"
       )}
-      <Footer />
     </div>
   );
 }

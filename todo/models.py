@@ -5,4 +5,4 @@ import pytz
 class TodoItem(models.Model):
     id = models.AutoField(primary_key=True)
     text = models.TextField()
-    date = models.DateTimeField(default=datetime.utcnow)
+    date = models.DateTimeField(blank=True, default=datetime.utcnow)

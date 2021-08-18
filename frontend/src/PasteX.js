@@ -13,7 +13,6 @@ const PasteX = () => {
         <div>
             <Navbar current="PasteX" />
             PasteX
-            <Footer />
         </div>
     )
 }

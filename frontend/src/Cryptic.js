@@ -13,7 +13,6 @@ const Cryptic = () => {
         <div>
             <Navbar current="Cryptic" />
             Cryptic
-            <Footer />
         </div>
     )
 }

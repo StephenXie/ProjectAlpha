@@ -13,7 +13,6 @@ const GPAC = () => {
         <div>
             <Navbar current="GPAC" />
             GPAC
-            <Footer />
         </div>
     )
 }

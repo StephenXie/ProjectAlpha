@@ -13,7 +13,6 @@ const Linky = () => {
         <div>
             <Navbar current="Linky" />
             Linky
-            <Footer />
         </div>
     )
 }

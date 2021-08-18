@@ -2,8 +2,8 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <footer className="absolute bottom-0 w-full ">
-        <div className="bg-gray-800">
+        <footer className="relative h-10">
+        <div className="bg-gray-800  w-full">
           <div className="max-w-screen-xl mx-auto py-10 px-4 sm:px-6 md:flex md:items-center md:justify-between text-gray-400">
             <div className="flex justify-center md:order-2 space-x-2">
               <div className="inline-block pl-6">

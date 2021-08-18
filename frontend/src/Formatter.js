@@ -13,7 +13,6 @@ const Formatter = () => {
         <div>
             <Navbar current="Formatter" />
             Formatter
-            <Footer />
         </div>
     )
 }
