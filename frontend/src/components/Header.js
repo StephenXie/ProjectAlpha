@@ -1,18 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Button from "./Button";
-const Header = ({ title, imgLink, onAdd, showAdd }) => {
+const Header = ({ title, descriptions, imgLink, onAdd, showAdd }) => {
   return (
-    <header className="relative shadow-lg bg-white rounded-3xl mt-3">
+    <header className="relative shadow-xl bg-white rounded-3xl mt-3">
       <div>
-        <div className="card lg:card-side bordered">
+        <div className="card lg:card-side ">
           <figure>
             <img src={imgLink} />
           </figure>
           <div className="card-body">
             <h2 className="card-title">{title}</h2>
             <p>
-              Drop down some notes or reminders for yourself by clicking on the button.
+              {descriptions}
             </p>
             <div className="card-actions">
             <Button
@@ -30,7 +30,7 @@ const Header = ({ title, imgLink, onAdd, showAdd }) => {
 };
 
 Header.defaultProps = {
-  title: "Task Tracker",
+  title: "",
 };
 
 Header.propTypes = {
