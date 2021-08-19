@@ -1,5 +1,4 @@
 """ProjectX URL Configuration
-
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
 Examples:
@@ -15,7 +14,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework import routers  
 from todo.views import todoView, addTodo, deleteTodo
+from todo import view_test
 from formatter.views import FormatterView
 from cryptic.views import CrypticView, CrypticPost
 from GPAcal.views import GPAcal
@@ -24,8 +25,13 @@ from linky.views import LinkyView
 from django.conf import settings
 from django.views.static import serve
 from django.conf.urls import url
+
+router = routers.DefaultRouter()                   
+router.register(r'todos', view_test.TodoView, 'todo')  
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/', include(router.urls),), 
     path('', include('AppX.urls')),
     path('formatter/', FormatterView),
     path('formatter/post', FormatterView),
