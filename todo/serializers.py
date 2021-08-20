@@ -4,4 +4,4 @@ from datetime import datetime
 class TodoSerializer(serializers.ModelSerializer):
     class Meta:
         model = TodoItem
-        fields = ('id','text' ,'date')
+        fields = ('id','text' ,'date', 'description')
