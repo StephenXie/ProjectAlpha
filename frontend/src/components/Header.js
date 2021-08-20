@@ -18,11 +18,7 @@ const Header = (props) => {
               {props.descriptions}
             </p>
             <div className="card-actions">
-            <Button
-                color={props.showAdd ? "red" : "green"}
-                text={props.showAdd ? "Hide Add Task" : "Show Add Task"}
-                onClick={props.onAdd}
-            />
+            {props.button}
             </div>
           </div>
         </div>

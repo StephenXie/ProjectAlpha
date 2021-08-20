@@ -1,0 +1,74 @@
+.my-collapse {
+  @apply relative grid overflow-hidden;
+}
+.my-collapse-arrow .my-collapse-title:after{
+  @apply transition-all ease-in-out duration-300 w-2 h-2 block absolute;
+  top: 1.4rem;
+  right: 1.4rem;
+  content: '';
+  transform-origin: 75% 75%;
+  transform: rotate(45deg);
+  box-shadow: 2px 2px;
+}
+.my-collapse-open.my-collapse-arrow .my-collapse-title:after,
+.my-collapse-arrow:focus:not(.my-collapse-close) .my-collapse-title:after,
+.my-collapse-arrow:not(.my-collapse-close) input[type=checkbox]:checked ~ .my-collapse-title:after
+{
+  transform: rotate(225deg);
+}
+.my-collapse:not(.my-collapse-open):not(.my-collapse-close) input[type=checkbox],
+.my-collapse:not(.my-collapse-open):not(.my-collapse-close) .my-collapse-title{
+  @apply cursor-pointer;
+}
+.my-collapse:focus:not(.my-collapse-open):not(.my-collapse-close) .my-collapse-title{
+  cursor: unset;
+}
+.my-collapse-title,
+.my-collapse>input[type=checkbox],
+.my-collapse-content{
+  @apply row-start-1 col-start-1;
+}
+.my-collapse-title,
+.my-collapse>input[type=checkbox]{
+  @apply p-1 w-full;
+  min-height: 1rem;
+  transition: background-color .2s ease-in-out;
+}
+
+
+.my-collapse-open .my-collapse-content,
+.my-collapse:focus:not(.my-collapse-close) .my-collapse-content,
+.my-collapse:not(.my-collapse-close) input[type=checkbox]:checked ~ .my-collapse-content{
+  @apply pb-4 opacity-100 bg-base-content bg-opacity-10;
+  transition: padding .2s ease-in-out, background-color .2s ease-in-out;
+}
+.my-collapse-content{
+  @apply px-4;
+  cursor: unset;
+  transition: padding .2s ease-in-out, background-color .2s ease-in-out;
+}
+.my-collapse-open .my-collapse-title,
+.my-collapse:focus:not(.my-collapse-close) .my-collapse-title,
+.my-collapse:not(.my-collapse-close) input[type=checkbox]:checked ~ .my-collapse-title{
+  @apply outline-none bg-base-content bg-opacity-10;
+}
+.my-collapse>input[type=checkbox]{
+  @apply appearance-none opacity-0;
+}
+.my-collapse-content{
+  @apply row-start-2 overflow-hidden;
+  max-height: 0px;
+}
+.my-collapse-open.my-collapse-arrow .my-collapse-title:after,
+.my-collapse-arrow:focus:not(.my-collapse-close) .my-collapse-title:after,
+.my-collapse-arrow:not(.my-collapse-close) input[type=checkbox]:checked ~ .my-collapse-title:after
+{
+  transform: rotate(225deg);
+}
+
+.my-collapse-open .my-collapse-content,
+.my-collapse:focus:not(.my-collapse-close) .my-collapse-content,
+.my-collapse:not(.my-collapse-close) input[type=checkbox]:checked ~ .my-collapse-content
+{
+  max-height: 9000px;
+}
