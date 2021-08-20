@@ -73,7 +73,7 @@ function Todo() {
         imgLink="https://images.pexels.com/photos/7103/writing-notes-idea-conference.jpg?auto=compress&cs=tinysrgb&dpr=2&h=125&w=210"
         descriptions="Drop down some notes or reminders for yourself by clicking on the button."
         button = {<Button
-          color={showAddTask ? "red" : "green"}
+          color={showAddTask ? "red" : "blue"}
           text={showAddTask ? "Hide Add Task" : "Show Add Task"}
           onClick={() => setShowAddTask(!showAddTask)}
       />}

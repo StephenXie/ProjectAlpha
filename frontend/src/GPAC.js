@@ -14,7 +14,7 @@ const GPAC = () => {
         imgLink="https://images.pexels.com/photos/1370296/pexels-photo-1370296.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=125&w=210"
         descriptions="Enter your grades, what types of classes you are taking, course credits(optional) and calculates your weighted and unweighted GPA."
       >
-        <Highlight color="indigo" text="GPA" /> Calculator
+        <Highlight color="green" text="GPA" r={600}/> Calculator
       </Header>
       <Classes />
     </div>
