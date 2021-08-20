@@ -1,24 +1,27 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Button from "./Button";
-const Header = ({ title, descriptions, imgLink, onAdd, showAdd }) => {
+import Highlight from "./Highlight";
+const Header = (props) => {
   return (
     <header className="relative shadow-xl bg-white rounded-3xl mt-3">
       <div>
         <div className="card lg:card-side ">
           <figure>
-            <img src={imgLink} />
+            <img src={props.imgLink} />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">{title}</h2>
+            <h2 className="card-title text-3xl font-extrabold">
+            {props.children}
+            </h2>
             <p>
-              {descriptions}
+              {props.descriptions}
             </p>
             <div className="card-actions">
             <Button
-                color={showAdd ? "red" : "green"}
-                text={showAdd ? "Hide Add Task" : "Show Add Task"}
-                onClick={onAdd}
+                color={props.showAdd ? "red" : "green"}
+                text={props.showAdd ? "Hide Add Task" : "Show Add Task"}
+                onClick={props.onAdd}
             />
             </div>
           </div>

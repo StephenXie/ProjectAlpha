@@ -1,8 +1,14 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, withRouter, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  withRouter,
+  Link,
+} from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Highlight from "./components/Highlight";
 import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
 import Particle from "./components/Particle";
@@ -18,18 +24,23 @@ function Todo() {
   }, []);
 
   const fetchTasks = async () => {
-    const res = await fetch("http://127.0.0.1:8000/api/todos/");
+    const res = await fetch(
+      "https://www.stephenxie.com/api/todos/?format=json"
+    );
     const data = await res.json();
     return data;
   };
   const addTask = async (task) => {
-    const res = await fetch("http://127.0.0.1:8000/api/todos/", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(task),
-    });
+    const res = await fetch(
+      "https://www.stephenxie.com/api/todos/?format=json",
+      {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(task),
+      }
+    );
 
     const data = await res.json();
 
@@ -39,7 +50,7 @@ function Todo() {
     // setTasks([...tasks, newTask])
   };
   const deleteTask = async (id) => {
-    await fetch(`http://127.0.0.1:8000/api/todos/${id}`, {
+    await fetch(`https://www.stephenxie.com/api/todos/${id}`, {
       method: "DELETE",
     });
     console.log("delete", id);
@@ -55,7 +66,7 @@ function Todo() {
   };
   return (
     <div className="my-container flex-1">
-      <Navbar current="Todo"/>
+      <Navbar current="Todo" />
       <Particle />
       <Header
         title="Todo List"
@@ -63,8 +74,10 @@ function Todo() {
         descriptions="Drop down some notes or reminders for yourself by clicking on the button."
         onAdd={() => setShowAddTask(!showAddTask)}
         showAdd={showAddTask}
-      />
-      
+      >
+        <Highlight color="blue" text="Todo" /> List
+      </Header>
+
       {showAddTask && <AddTask onAdd={addTask} />}
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
