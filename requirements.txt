@@ -1,5 +1,5 @@
 ﻿alt-profanity-check==0.24.0
-asgiref==3.3.1
+asgiref>=3.3.1
 attrs==20.3.0
 autobahn==21.2.1
 Automat==20.2.0
