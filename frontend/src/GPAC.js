@@ -1,19 +1,19 @@
-import { useState, useEffect } from "react";
-import Particles from "react-particles-js";
-import { BrowserRouter as Router, Route, withRouter,Link } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import { withRouter } from "react-router-dom";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Tasks from "./components/Tasks";
-import AddTask from "./components/AddTask";
-import { Nav } from "reactstrap";
-
+import Particle from "./components/Particle";
+import Highlight from "./components/Highlight";
 const GPAC = () => {
     return (
-        <div>
-            <Navbar current="GPAC" />
-            GPAC
-        </div>
+    <div className="my-container flex-1  bg-green-50">
+      <Particle />
+      <Header
+      className=""
+        imgLink="https://images.pexels.com/photos/1370296/pexels-photo-1370296.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=125&w=210"
+        descriptions="Enter your grades, what types of classes you are taking, course credits(optional) and calculates your weighted and unweighted GPA. "
+      >
+        <Highlight color="indigo" text="GPA" /> Calculator
+      </Header>
+    </div>
     )
 }
 

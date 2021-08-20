@@ -1,9 +1,9 @@
 import { Fragment } from 'react'
-import { BrowserRouter as Router, Link, withRouter } from "react-router-dom";
+import { BrowserRouter as Router, NavLink, withRouter } from "react-router-dom";
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 
-const navbar_list = [
+const navigation = [
   { name: 'Home', href: '/',  },
   { name: 'Todo', href: '/Todo',  },
   { name: 'Formatter', href: '/Formatter',  },
@@ -18,7 +18,6 @@ function classNames(...classes) {
 }
 
 function Navbar({ current }) {
-  const navigation = navbar_list.map((item) => item["name"]==current ? {...item, current:true } : {...item, current:false })
   return (
     <Disclosure as="nav" className="bg-gray-800 bg-opacity-100">
       {({ open }) => (
@@ -52,17 +51,15 @@ function Navbar({ current }) {
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <Link
+                      <NavLink
                         key={item.name}
                         to={item.href}
-                        className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'px-3 py-2 rounded-md text-sm font-medium'
-                        )}
-                        aria-current={item.current ? 'page' : undefined}
+                        exact={true}
+                        className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
+                        activeClassName="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
                       >
                         {item.name}
-                      </Link>
+                      </NavLink>
                     ))}
                   </div>
                 </div>

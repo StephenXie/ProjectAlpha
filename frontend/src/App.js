@@ -17,8 +17,9 @@ import { Nav } from "reactstrap";
 
 const App = () => {
     return (
-        <div class="flex flex-col min-h-screen justify-between">
+        <div className="flex flex-col min-h-screen justify-between">
         <Router>
+        <Navbar />
             <Switch>
                 <Route exact path='/' component={Home} />
                 <Route path='/Todo' component={Todo} />

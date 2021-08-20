@@ -11,7 +11,6 @@ import { Nav } from "reactstrap";
 const Formatter = () => {
     return (
         <div>
-            <Navbar current="Formatter" />
             Formatter
         </div>
     )

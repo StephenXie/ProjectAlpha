@@ -66,7 +66,6 @@ function Todo() {
   };
   return (
     <div className="my-container flex-1">
-      <Navbar current="Todo" />
       <Particle />
       <Header
         title="Todo List"

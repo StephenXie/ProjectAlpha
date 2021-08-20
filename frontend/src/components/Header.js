@@ -4,17 +4,17 @@ import Button from "./Button";
 import Highlight from "./Highlight";
 const Header = (props) => {
   return (
-    <header className="relative shadow-xl bg-white rounded-3xl mt-3">
+    <header className="relative shadow-xl bg-white rounded-3xl max-w-6xl w-auto mt-3 ">
       <div>
         <div className="card lg:card-side ">
           <figure>
             <img src={props.imgLink} />
           </figure>
-          <div className="card-body">
+          <div className="card-body ">
             <h2 className="card-title text-3xl font-extrabold">
             {props.children}
             </h2>
-            <p>
+            <p className="break-normal">
               {props.descriptions}
             </p>
             <div className="card-actions">

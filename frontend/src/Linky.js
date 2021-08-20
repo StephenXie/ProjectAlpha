@@ -11,7 +11,6 @@ import { Nav } from "reactstrap";
 const Linky = () => {
     return (
         <div>
-            <Navbar current="Linky" />
             Linky
         </div>
     )

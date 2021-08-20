@@ -11,7 +11,6 @@ import { Nav } from "reactstrap";
 const Cryptic = () => {
     return (
         <div>
-            <Navbar current="Cryptic" />
             Cryptic
         </div>
     )

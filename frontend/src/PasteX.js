@@ -11,7 +11,6 @@ import { Nav } from "reactstrap";
 const PasteX = () => {
     return (
         <div>
-            <Navbar current="PasteX" />
             PasteX
         </div>
     )
