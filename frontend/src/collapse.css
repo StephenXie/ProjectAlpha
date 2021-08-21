@@ -3,7 +3,7 @@
 }
 .my-collapse-arrow .my-collapse-title:after{
   @apply transition-all ease-in-out duration-300 w-2 h-2 block absolute;
-  top: 1.4rem;
+  top: 0.8rem;
   right: 1.4rem;
   content: '';
   transform-origin: 75% 75%;

@@ -51,7 +51,7 @@ const Home = () => {
           </a>
           <label htmlFor="toogleButton" className="flex cursor-pointer text-base font-medium justify-center">
           <div className="px-2 text-white">            
-          {techToggled ? <Highlight color="green" text="Tech"/> : "Tech"} mode</div>
+          {techToggled ? <span className="font-bold"><Highlight color="green" text="Tech" l={300} r={500}/></span> : "Tech"} mode</div>
           <div className="relative">
             <input
               id="toogleButton"
