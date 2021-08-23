@@ -37,7 +37,7 @@ function Todo() {
       {
         method: "POST",
         headers: {
-          "Content-type": "application/json",
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(task),
       }

@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "proxy": "http://127.0.0.1:8000/",
+  "proxy": "https://www.stephenxie.com",
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.2.0",
@@ -22,6 +22,7 @@
     "react-scripts": "4.0.3",
     "reactstrap": "^8.9.0",
     "tsparticles": "^1.33.3",
+    "twind": "^0.16.16",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

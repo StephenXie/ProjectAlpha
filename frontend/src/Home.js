@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
+import { tw } from 'twind'
 import Footer from "./components/Footer";
 import Highlight from "./components/Highlight";
 import Tasks from "./components/Tasks";
@@ -40,11 +41,9 @@ const Home = () => {
           <a
             id="about-me-button"
             href="https://stephenxie.me/"
-            className={`py-4 px-6 m-4 bg-${
-              techToggled ? "green" : "yellow"
-            }-300 hover:bg-${
-              techToggled ? "green" : "yellow"
-            }-500 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-2/5 transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full`}
+            className={tw`py-4 px-6 m-4 ${
+              techToggled ? "bg-green-300 hover:bg-green-500" : "bg-yellow-300 hover:bg-yellow-500"
+            } focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-2/5 transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full`}
             type="button"
           >
             About Me
