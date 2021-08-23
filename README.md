@@ -2,6 +2,9 @@
 [![Build Status](https://travis-ci.com/QLSCO/ProjectAlpha.svg?branch=master)](https://travis-ci.com/QLSCO/ProjectAlpha) [![Django CI](https://github.com/QLSCO/ProjectAlpha/actions/workflows/django.yml/badge.svg)](https://github.com/QLSCO/ProjectAlpha/actions/workflows/django.yml) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![Website StephenXie.com](https://img.shields.io/website-up-down-green-red/http/stephenxie.com.svg)](http://stephenxie.com/) [![Commit Activity](https://img.shields.io/github/commit-activity/m/qlsco/projectalpha)](https://github.com/QLSCO/ProjectAlpha/pulse) [![GitHub issues](https://img.shields.io/github/issues/QLSCO/ProjectAlpha)](https://GitHub.com/QLSCO/ProjectAlpha/issues/) [![GitHub issues](https://img.shields.io/github/issues-closed/QLSCO/ProjectAlpha)](https://github.com/QLSCO/ProjectAlpha/issues?q=is%3Aissue+is%3Aclosed) [![GitHub pull-requests](https://img.shields.io/github/issues-pr/QLSCO/ProjectAlpha.svg)](https://GitHub.com/QLSCO/ProjectAlpha/pulls/) [![GitHub pull-requests](https://img.shields.io/github/issues-pr-closed/QLSCO/ProjectAlpha.svg)](https://github.com/QLSCO/ProjectAlpha/pulls?q=is%3Apr+is%3Aclosed)
 ## Where can I find this *AWESOME* website?
 Go to https://www.stephenx.tech/ or https://www.stephenx.live/ or https://sx-my-app.herokuapp.com/ or https://www.stephenxie.com/
+### React website under construction
+We are currently trying to use React.js to redesign the frontend, the code can be found in the ```development-react``` branch.
+The website is currently hosted at http://dev.stephenxie.com/.
 ## Wiki
 **Go to the [Wiki page](https://github.com/QLSCO/ProjectAlpha/wiki) for more information and fun facts about this project**
 ## Resources
