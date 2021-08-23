@@ -65,6 +65,7 @@ ROOT_URLCONF = 'ProjectX.urls'
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
+    'https://hey-react.herokuapp.com',
 ]
 
 
