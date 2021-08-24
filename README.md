@@ -41,6 +41,7 @@ python manage.py runserver
 ## GPA Calculator
 - add and delete class button
   - implemented using JS and JQuery
+  - [new] using react components
 - input fields: class name(optional), grade, credit, weight
 - using AJAX to update GPA when the form is changed without refreshing the page
   - using jQuery
