@@ -62,13 +62,13 @@ MIDDLEWARE = [
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT = False
 ROOT_URLCONF = 'ProjectX.urls'
-
-CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000',
-    'http://localhost:5000',
-    'https://hey-react.herokuapp.com',
-    'http://dev.stephenxie.com/'
-]
+CORS_ALLOW_ALL_ORIGINS = True
+# CORS_ORIGIN_WHITELIST = [
+#     'http://localhost:3000',
+#     'http://localhost:5000',
+#     'https://hey-react.herokuapp.com',
+#     'http://dev.stephenxie.com/'
+# ]
 
 
 TEMPLATES = [
