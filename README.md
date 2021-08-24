@@ -26,14 +26,22 @@ To run, enter
 python manage.py runserver
 ```
 ### Frontend
-First, ```cd``` into the ```frontend``` directory.
-``` cd frontend```
-Then, make sure you have dependencies installed/
-``` npm install ```
-To run, enter
-``` npm start ```
-To build, enter
-``` npm run build ```
+First, ```cd``` into the ```frontend``` directory.  
+``` 
+cd frontend
+```  
+Then, make sure you have dependencies installed  
+```
+npm install 
+```  
+To run, enter  
+``` 
+npm start
+```  
+To build, enter  
+``` 
+npm run build 
+```  
 ## File structure
 - Todo, Formatter, Cryptic, GPAcal, PasteX, Linky - apps
   - Views - the main thing handling the the get and post requests
