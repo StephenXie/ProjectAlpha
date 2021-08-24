@@ -13,6 +13,8 @@ The website is currently hosted at http://dev.stephenxie.com/.
 [Django Documentation](https://docs.djangoproject.com/en/3.1/) - Documentation for django, pretty useful  
 [Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql) - How to use the database  
 ## Local usage
+
+### Backend
 Make sure you have python 3.6 or above  
 
 First, install all of the dependencies needed  
@@ -23,6 +25,15 @@ To run, enter
 ```
 python manage.py runserver
 ```
+### Frontend
+First, ```cd``` into the ```frontend``` directory.
+``` cd frontend```
+Then, make sure you have dependencies installed/
+``` npm install ```
+To run, enter
+``` npm start ```
+To build, enter
+``` npm run build ```
 ## File structure
 - Todo, Formatter, Cryptic, GPAcal, PasteX, Linky - apps
   - Views - the main thing handling the the get and post requests
