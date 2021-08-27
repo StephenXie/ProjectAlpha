@@ -18,8 +18,8 @@ import { Nav } from "reactstrap";
 
 const Home = () => {
   const link = [
-    "https://stephenxie.me/images/Pexels%20Videos%201720220.mp4",
-    "https://stephenxie.me/images/background.mp4",
+    "https://stephenxie.github.io/images/Pexels%20Videos%201720220.mp4",
+    "https://stephenxie.github.io/images/background.mp4",
   ];
   const [techToggled, setTechToggled] = useState(false);
   const toggleTech = () =>{
@@ -40,7 +40,7 @@ const Home = () => {
           </h1>
           <a
             id="about-me-button"
-            href="https://stephenxie.me/"
+            href="https://stephenxie.github.io/"
             className={tw`py-4 px-6 m-4 ${
               techToggled ? "bg-green-300 hover:bg-green-500" : "bg-yellow-300 hover:bg-yellow-500"
             } focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-2/5 transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full`}
