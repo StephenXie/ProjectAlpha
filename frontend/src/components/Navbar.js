@@ -39,12 +39,12 @@ function Navbar({ current }) {
                 <div className="flex-shrink-0 flex items-center">
                   <img
                     className="block lg:hidden h-8 w-auto"
-                    src="https://stephenxie.me/images/avatar_white%20-%20round.png"
+                    src="https://stephenxie.github.io/images/avatar_white%20-%20round.png"
                     alt="Workflow"
                   />
                   <img
                     className="hidden lg:block h-8 w-auto"
-                    src="https://stephenxie.me/images/avatar_white%20-%20round.png"
+                    src="https://stephenxie.github.io/images/avatar_white%20-%20round.png"
                     alt="Workflow"
                   />
                 </div>
@@ -77,7 +77,7 @@ function Navbar({ current }) {
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
-                        src="https://stephenxie.me/images/avatar_white%20-%20round.png"
+                        src="https://stephenxie.github.io/images/avatar_white%20-%20round.png"
                         alt=""
                       />
                     </Menu.Button>
