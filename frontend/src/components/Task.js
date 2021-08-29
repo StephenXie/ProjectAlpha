@@ -11,7 +11,7 @@ const Task = ({ task, onDelete, onToggle }) => {
           <div tabindex="0" className={`my-collapse w-3/5 rounded-box absolute p-1 ${task.description ? "my-collapse-arrow" : ""}`}>
             {task.description && <input type="checkbox" /> }
             <div className="my-collapse-title font-medium dark:text-white">{task.text}</div>
-            <div className="my-collapse-content"><p>{task.description}</p></div>
+            <div className={`${task.description ?" my-collapse-content" : ""}`}><p>{task.description}</p></div>
           </div>
           <div className="flex flex-row">
           <div className="text-gray-600  :text-gray-200 text-xs mr-8 ">
