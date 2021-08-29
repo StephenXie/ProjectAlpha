@@ -4,7 +4,7 @@ const Particle = () => {
     return (
         <div>
             <Particles
-            className="absolute"
+            className="absolute w-full h-full"
             params={ {
                 particles: {
                   number: {
