@@ -18,8 +18,8 @@ import { Nav } from "reactstrap";
 
 const Home = () => {
   const link = [
-    "https://stephenxie.github.io/images/Pexels%20Videos%201720220.mp4",
-    "https://stephenxie.github.io/images/background.mp4",
+    "https://player.vimeo.com/external/308040879.hd.mp4?s=2835a82f3a27769f48cd48f0bc6227230836dc36&profile_id=175&oauth2_token_id=57447761",
+    "https://player.vimeo.com/external/369267842.hd.mp4?s=c7ef1ebeff74b8916ace6c36bb286ee1f4b59216&profile_id=175&oauth2_token_id=57447761",
   ];
   const [techToggled, setTechToggled] = useState(false);
   const toggleTech = () =>{
