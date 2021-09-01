@@ -78,7 +78,7 @@ const Class = () => {
       >
         <img
           className="pb-1 inline-block m-auto"
-          src="https://stephenxie.me/images/delete.svg"
+          src="https://stephenxie.github.io/images/delete.svg"
           height={40}
           width={40}
         />
