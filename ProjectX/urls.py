@@ -20,6 +20,7 @@ from todo import view_test
 from formatter.views import FormatterView
 from cryptic.views import CrypticView, CrypticPost
 from GPAcal.views import GPAcal
+from GPAcal.views_test import api_GPAcal
 from PasteX.views import PasteXView
 from linky.views import LinkyView
 from django.conf import settings
@@ -38,6 +39,7 @@ urlpatterns = [
     path('cryptic/', CrypticView),
     path('cryptic/post', CrypticPost),
     path('GPAcal/', GPAcal),
+    path('apiGPAcal',api_GPAcal),
     path('todo/', todoView),
     path('addTodo/', addTodo),
     path('deleteTodo/<int:todo_id>/', deleteTodo),
