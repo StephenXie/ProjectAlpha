@@ -1,18 +1,23 @@
 import React, { useState, useEffect } from "react";
 
-const Class = ({myId, deleteClass, setData}) => {
-  const [name, setName] = useState(myId);
-  const [grade, setGrade] = useState("");
-  const [weight, setWeight] = useState("");
+const Class = ({ myId, deleteClass, setData }) => {
+  const [name, setName] = useState("");
+  const [grade, setGrade] = useState("A");
+  const [weight, setWeight] = useState("R");
+  const [animation, setAnimation] = useState("animate__bounceIn");
+  const deleteMe = () => {
+    setAnimation("animate__bounceOut")
+    setTimeout(() => deleteClass(myId), 800)
+  }
   const onChange = () => {
     setData(myId, name, grade, weight);
-    console.log("change")
+    console.log("change");
   };
-  useEffect(()=>{
-    onChange()
-  },[name,grade,weight])
+  useEffect(() => {
+    onChange();
+  }, [name, grade, weight]);
   return (
-    <div id={`class-${myId}`} className="m-auto">
+    <div id={`class-${myId}`} className={`m-auto animate__animated ${animation} animate__faster`}>
       <input
         id="class_name"
         name="class_name"
@@ -33,9 +38,7 @@ const Class = ({myId, deleteClass, setData}) => {
         required
       >
         <option value="A+">A+</option>
-        <option value="A" selected="selected">
-          A
-        </option>
+        <option value="A">A</option>
         <option value="A-">A-</option>
         <option value="B+">B+</option>
         <option value="B">B</option>
@@ -57,9 +60,7 @@ const Class = ({myId, deleteClass, setData}) => {
         className="inline-block m-auto w-36 text-gray-700 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
         required
       >
-        <option value="R" selected="selected">
-          Regular
-        </option>
+        <option value="R">Regular</option>
         <option value="AP/IB">AP/IB</option>
         <option value="H+">Honors(5)</option>
         <option value="H-">Honors(4.5)</option>
@@ -72,9 +73,7 @@ const Class = ({myId, deleteClass, setData}) => {
         className="inline-block m-auto w-36 text-gray-700 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
         required
       >
-        <option selected value={1}>
-          Default
-        </option>
+        <option value={1}>Default</option>
         <option value={1}>1</option>
         <option value="1.5">1.5</option>
         <option value={2}>2</option>
@@ -89,7 +88,7 @@ const Class = ({myId, deleteClass, setData}) => {
       <button
         type="button"
         className="inline-block m-auto transform hover:scale-110 duration-200"
-        onClick={() => deleteClass(myId)}
+        onClick={() => deleteMe()}
         id="delete_class"
       >
         <img

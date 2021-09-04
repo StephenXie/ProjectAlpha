@@ -10,7 +10,7 @@ const GPAC = () => {
     const [classes, setClasses] = useState([{id:0, name: "", grade: ""}]); 
     const [numClass, setNumClass] = useState(1);
     const addClass = () => {
-      setClasses([...classes, {id: numClass, name: "test", grade: "A-"}])
+      setClasses([...classes, {id: numClass, name: "", grade: "A-"}])
       setNumClass(numClass+1);
     }
     const deleteClass = (id) =>{
