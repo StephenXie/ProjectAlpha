@@ -7,7 +7,7 @@ const Class = ({ myId, deleteClass, setData }) => {
   const [animation, setAnimation] = useState("animate__zoomInDown");
   const deleteMe = () => {
     setAnimation("animate__rollOut")
-    setTimeout(() => deleteClass(myId), 800)
+    setTimeout(() => deleteClass(myId), 250)
   }
   const onChange = () => {
     setData(myId, name, grade, weight);
