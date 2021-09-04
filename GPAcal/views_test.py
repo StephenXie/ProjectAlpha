@@ -4,6 +4,7 @@ from django.template.loader import render_to_string
 from django.views import View
 from GPAcal.scripts import getGPA_w, getGPA_u, getMaxGPA
 from rest_framework.decorators import api_view
+import json
 
 
 # Create your views here.
@@ -26,5 +27,5 @@ def api_GPAcal(request):
     GPA_w = round(GPA_w, 2)
     GPA_u = round(GPA_u, 2)
     args = {"GPA_w": GPA_w, "GPA_u": GPA_u, "max_GPA": round(
-        max_GPA, 2), "pct_u": str(pct_u)+"%", "pct_w": str(pct_w)+"%"}
-    return HttpResponse(args)
+        max_GPA, 2), "pct_u": pct_u, "pct_w": pct_w}
+    return HttpResponse(json.dumps(args))
