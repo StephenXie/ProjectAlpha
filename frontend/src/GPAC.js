@@ -31,7 +31,7 @@ const GPAC = () => {
         descriptions="Enter your grades, what types of classes you are taking, course credits(optional) and calculates your weighted and unweighted GPA."
       button={<Button text="Add class" color="green" onClick={addClass} className="relative"/>}
       >
-        <Highlight color="green" text="GPA" r={600}/> Calculator
+        <div className="animate__animated animate__flip"><Highlight color="green" text="GPA" r={600}/> Calculator</div> 
       </Header>
       <Classes classes={classes} deleteClass={deleteClass} setData={setData}/>
     </div>
