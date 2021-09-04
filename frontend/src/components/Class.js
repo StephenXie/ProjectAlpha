@@ -1,19 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-const Class = () => {
+const Class = ({myId, deleteClass, setData}) => {
+  const [name, setName] = useState(myId);
+  const [grade, setGrade] = useState("");
+  const [weight, setWeight] = useState("");
+  const onChange = () => {
+    setData(myId, name, grade, weight);
+    console.log("change")
+  };
+  useEffect(()=>{
+    onChange()
+  },[name,grade,weight])
   return (
-    <div id="class-0" className="m-auto">
+    <div id={`class-${myId}`} className="m-auto">
       <input
         id="class_name"
         name="class_name"
         type="text"
         placeholder="Class name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
         style={{ width: "30%" }}
         className="inline-block max-w-md rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
       />
       <select
         id="grade"
         name="grade"
+        value={grade}
+        onChange={(e) => setGrade(e.target.value)}
         style={{ width: "13%" }}
         className="inline-block m-auto w-24 text-gray-700 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
         required
@@ -37,6 +51,8 @@ const Class = () => {
       <select
         id="class_type"
         name="class_type"
+        value={weight}
+        onChange={(e) => setWeight(e.target.value)}
         style={{ width: "20%" }}
         className="inline-block m-auto w-36 text-gray-700 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
         required
@@ -73,7 +89,7 @@ const Class = () => {
       <button
         type="button"
         className="inline-block m-auto transform hover:scale-110 duration-200"
-        onclick="deleteClass('class-0')"
+        onClick={() => deleteClass(myId)}
         id="delete_class"
       >
         <img

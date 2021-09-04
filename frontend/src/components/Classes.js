@@ -1,11 +1,13 @@
 import React from "react";
 import Class from "./Class";
-const Classes = ({ classes }) => {
+const Classes = ({ classes, deleteClass, setData }) => {
   return (
-    <div className="max-w-full m-auto relative">
+    <div className="max-w-full mx-auto relative my-2">
       <div className="inline-block text-left space-y-3 ">
-        <div id="classes" className="space-y-2">
-          <Class />
+        <div id="myclasses" className="space-y-2">
+        {classes.map((myclass) => (
+      <Class key={myclass.id} myId={myclass.id} deleteClass={deleteClass} setData={setData}/>
+    ))}
         </div>
       </div>
     </div>
