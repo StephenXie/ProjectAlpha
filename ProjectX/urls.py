@@ -39,7 +39,7 @@ urlpatterns = [
     path('cryptic/', CrypticView),
     path('cryptic/post', CrypticPost),
     path('GPAcal/', GPAcal),
-    path('apiGPAcal',api_GPAcal),
+    path('apiGPAcal/',api_GPAcal),
     path('todo/', todoView),
     path('addTodo/', addTodo),
     path('deleteTodo/<int:todo_id>/', deleteTodo),
