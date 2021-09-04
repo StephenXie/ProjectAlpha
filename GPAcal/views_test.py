@@ -5,7 +5,9 @@ from django.views import View
 from GPAcal.scripts import getGPA_w, getGPA_u, getMaxGPA
 from rest_framework.decorators import api_view
 import json
+from django.views.decorators.csrf import csrf_exempt
 
+@csrf_exempt
 
 # Create your views here.
 
