@@ -6,7 +6,7 @@ Go to https://www.stephenxie.com/ or https://sx-my-app.herokuapp.com/.
 We are currently trying to use React.js to redesign the frontend, the code can be found in the ```development-react``` branch.
 The website is currently hosted at http://dev.stephenxie.com/.
 ## Wiki
-**Go to the [Wiki page](https://github.com/QLSCO/ProjectAlpha/wiki) for more information and fun facts about this project**
+**Go to the [Wiki page](https://github.com/QLSCO/ProjectAlpha/wiki) for more information about this project**
 ## Resources
 **[Tailwind Documentation](https://tailwindcss.com/docs)** - Documentation for tailwind css and how to use it  
 [Tailwind Kit](https://www.tailwind-kit.com/) - They have some nice css components  
