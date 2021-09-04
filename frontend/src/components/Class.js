@@ -4,9 +4,9 @@ const Class = ({ myId, deleteClass, setData }) => {
   const [name, setName] = useState("");
   const [grade, setGrade] = useState("A");
   const [weight, setWeight] = useState("R");
-  const [animation, setAnimation] = useState("animate__bounceIn");
+  const [animation, setAnimation] = useState("animate__zoomInDown");
   const deleteMe = () => {
-    setAnimation("animate__bounceOut")
+    setAnimation("animate__rollOut")
     setTimeout(() => deleteClass(myId), 800)
   }
   const onChange = () => {
