@@ -15,7 +15,7 @@ const Class = ({ myId, deleteClass, setData }) => {
   };
   useEffect(() => {
     onChange();
-  }, [name, grade, weight]);
+  }, [name, grade, weight, credit]);
   return (
     <div id={`class-${myId}`} className={`m-auto animate__animated ${animation} animate__faster`}>
       <input
