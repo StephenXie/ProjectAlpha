@@ -17,6 +17,7 @@ def api_GPAcal(request):
     if request.method == "POST":
         print("SX")
         data = json.loads(request.body.decode("utf-8"))
+        print(data)
         classes = data.get("class_name")
         grades = data.get("grade")
         class_type = data.get("class_type")
