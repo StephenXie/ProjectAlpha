@@ -15,10 +15,12 @@ from django.views.decorators.csrf import csrf_exempt
 def api_GPAcal(request):
     GPA_u = GPA_w = max_GPA = 4.0
     if request.method == "POST":
-        classes = request.POST.get("class_name")
-        grades = request.POST.get("grade")
-        class_type = request.POST.get("class_type")
-        credit = request.POST.get("credit")
+        print("SX")
+        data = json.loads(request.body.decode("utf-8"))
+        classes = data.get("class_name")
+        grades = data.get("grade")
+        class_type = data.get("class_type")
+        credit = data.get("credit")
         GPA_w = getGPA_w(grades, class_type, credit)
         GPA_u = getGPA_u(grades, credit)
         max_GPA = getMaxGPA(class_type)
