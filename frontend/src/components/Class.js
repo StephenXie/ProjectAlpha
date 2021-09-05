@@ -4,14 +4,14 @@ const Class = ({ myId, deleteClass, setData }) => {
   const [name, setName] = useState("");
   const [grade, setGrade] = useState("A");
   const [weight, setWeight] = useState("R");
+  const [credit, setCredit] = useState("1");
   const [animation, setAnimation] = useState("animate__zoomInDown");
   const deleteMe = () => {
     setAnimation("animate__rollOut")
     setTimeout(() => deleteClass(myId), 250)
   }
   const onChange = () => {
-    setData(myId, name, grade, weight);
-    console.log("change");
+    setData(myId, name, grade, weight, credit);
   };
   useEffect(() => {
     onChange();
@@ -69,6 +69,8 @@ const Class = ({ myId, deleteClass, setData }) => {
       <select
         id="credit"
         name="credit"
+        value={credit}
+        onChange={(e) => setCredit(e.target.value)}
         style={{ width: "20%" }}
         className="inline-block m-auto w-36 text-gray-700 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500"
         required
