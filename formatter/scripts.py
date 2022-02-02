@@ -29,6 +29,9 @@ def GetResult(n, style):
         for i in n.split("\n"):
             res.append(i.lstrip())
         return "\n".join(res)
+    if style == "spaceout":
+        res = "  ".join(list(n))
+        return res
     return n
 
 
