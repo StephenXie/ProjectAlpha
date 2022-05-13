@@ -5,3 +5,4 @@ class JournalSerializer(serializers.ModelSerializer):
     class Meta:
         model = JournalItem
         fields = ('id','title' ,'date', 'content')
+        
