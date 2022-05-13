@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'GPAcal',
     'PasteX',
     'linky',
+    'journals',
     'django.contrib.admin',
     'corsheaders',
     'rest_framework',
@@ -67,8 +68,8 @@ CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
     'http://localhost:5000',
     'https://hey-react.herokuapp.com',
-    'http://dev.stephenxie.com/',
-    'http://www.stephenxie.com/',
+    'http://dev.stephenxie.com',
+    'http://www.stephenxie.com',
 ]
 
 

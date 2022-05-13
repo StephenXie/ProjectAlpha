@@ -16,7 +16,8 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers  
 from todo.views import todoView, addTodo, deleteTodo
-from todo import view_test
+from todo import todo_view
+from journals import journal_view
 from formatter.views import FormatterView
 from cryptic.views import CrypticView, CrypticPost
 from GPAcal.views import GPAcal
@@ -28,8 +29,8 @@ from django.views.static import serve
 from django.conf.urls import url
 
 router = routers.DefaultRouter()                   
-router.register(r'todos', view_test.TodoView, 'todo')  
-
+router.register(r'todos', todo_view.TodoView, 'todo')  
+router.register(r'journals', journal_view.JournalView, 'journal') 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls),), 
