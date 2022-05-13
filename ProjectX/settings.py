@@ -69,7 +69,7 @@ CORS_ORIGIN_WHITELIST = [
     'http://localhost:5000',
     'https://hey-react.herokuapp.com',
     'http://dev.stephenxie.com',
-    'http://www.stephenxie.com',
+    # 'http://www.stephenxie.com',
 ]
 
 
