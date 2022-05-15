@@ -20,12 +20,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY', "g%u_m4bxeoh%v&zg6neup_67m6mz-3@k=r%dxih%7d*1fs$8uv")
+SECRET_KEY = os.getenv(
+    'SECRET_KEY', "g%u_m4bxeoh%v&zg6neup_67m6mz-3@k=r%dxih%7d*1fs$8uv")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'sx-my-app.herokuapp.com', 'www.stephenxie.com','www.stephenx.live', 'www.stephenx.tech']
+ALLOWED_HOSTS = ['127.0.0.1', 'sx-my-app.herokuapp.com',
+                 'www.stephenxie.com', 'www.stephenx.live', 'www.stephenx.tech']
 
 
 # Application definition
@@ -42,13 +44,18 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'corsheaders',
     'rest_framework',
+    'rest_framework.authtoken',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
-
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',  # <-- And here
+    ],
+}
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
@@ -65,6 +72,7 @@ SECURE_SSL_REDIRECT = False
 ROOT_URLCONF = 'ProjectX.urls'
 CORS_ALLOW_ALL_ORIGINS = False
 CORS_ORIGIN_WHITELIST = [
+    'http://127.0.0.1:8000',
     'http://localhost:3000',
     'http://localhost:5000',
     'https://hey-react.herokuapp.com',
@@ -76,7 +84,7 @@ CORS_ORIGIN_WHITELIST = [
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -101,10 +109,9 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-db_from_env = dj_database_url.config(default="postgres://zluhqtowmpyvet:8dc2014edffac0c281f525721c2cfcdc3e526d0211718f3aae37fc337c740dc5@ec2-52-44-31-100.compute-1.amazonaws.com:5432/d55q54904s24kg")
+db_from_env = dj_database_url.config(
+    default="postgres://zluhqtowmpyvet:8dc2014edffac0c281f525721c2cfcdc3e526d0211718f3aae37fc337c740dc5@ec2-52-44-31-100.compute-1.amazonaws.com:5432/d55q54904s24kg")
 DATABASES['default'] = db_from_env
-
-
 
 
 # Password validation
