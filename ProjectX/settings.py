@@ -27,7 +27,7 @@ SECRET_KEY = os.getenv(
 DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'sx-my-app.herokuapp.com',
-                 'www.stephenxie.com', 'www.stephenx.live', 'www.stephenx.tech']
+                 'www.stephenxie.com', 'www.stephenx.live', 'www.stephenx.tech', 'dev.stephenxie.com']
 
 
 # Application definition
