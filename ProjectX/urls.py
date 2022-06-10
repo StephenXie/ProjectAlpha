@@ -48,6 +48,7 @@ urlpatterns = [
     path('pastex/<str:my_id>/', PasteXView),
     path('linky/', LinkyView),
     path('linky/<str:my_id>/', LinkyView),
+    path('', include('account.urls')),
     url(r'^media/(?P<path>.*)$', serve,
         {'document_root': settings.MEDIA_ROOT}),
     url(r'^static/(?P<path>.*)$', serve,
